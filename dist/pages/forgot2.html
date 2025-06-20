@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Noahlex | Login</title>
+  <title>Noahlex | Forgot Password</title>
   <!--begin::Primary Meta Tags-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="title" content="AdminLTE v4 | Dashboard" />
@@ -61,74 +61,43 @@
   <div class="p-2  d-flex min-vh-100">
     <div class="row flex-grow-1">
       <div class="col-lg-6">
-        <div class="p-3 bg-white d-flex flex-column align-items-center justify-content-end h-100">
+        <div class="p-3 bg-white d-flex flex-column align-items-center justify-content-center h-100">
           <div class="col-lg-8 col-12 d-flex flex-column align-items-center mb-32">
-            <img src="../assets/images/logo.svg" alt="Noahlex Logo" class="img-fluid mb-32">
-            <h1 class="text-center mb-3 fw-medium">Welcome to <br>
-              <span class="text-primary-500">Noahlex Power</span>
+            <a href="forgot.html"
+              class="d-flex align-items-center text-decoration-none text-sub-500 mb-32 fw-medium gap-2 align-self-start">
+              <span class="icon-arrow-left"></span>
+              Back
+            </a>
+            <h1 class="text-center mb-3 fw-medium">New password
             </h1>
-            <p class="text-center text-sub-500 fw-medium mb-32">A Tailored for Energy, Built for Control</p>
+            <p class="text-center text-sub-500 fw-medium mb-32">Your password must contain letters and numbers</p>
             <div class="w-100">
-              <form action="" class="mb-32">
+              <form action="" class="">
                 <div class="mb-3 w-100">
-                  <label for="email" class="form-label text-sub-500 fw-medium fs-8">Email Address</label>
-                  <input type="email" class="form-control form-control-lg" id="email" placeholder="Email Address"
-                    required>
-                </div>
-                <div class="mb-3 w-100">
-                  <label for="email" class="form-label text-sub-500 fw-medium fs-8">Password</label>
+                  <label for="email" class="form-label text-sub-500 fw-medium fs-8">Your New Password </label>
                   <div class="input-group">
-                    <input type="password" class="form-control form-control-lg border-end-0"
-                      placeholder="Recipient’s username" id="password" aria-label="Recipient’s username"
-                      aria-describedby="basic-addon2">
+                    <input type="password" class="form-control form-control-lg border-end-0" placeholder="Password"
+                      id="password" aria-label="Recipient’s username" aria-describedby="basic-addon2">
                     <span class="input-group-text bg-white border-start-0" onclick="showPassword('password')"
                       id="basic-addon2"><i class="icon-eye-off fw-medium "></i></span>
                   </div>
                 </div>
-                <div class=" w-100 d-flex align-items-center justify-content-between mb-32">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label text-sub-500 fw-medium fs-8" for="flexCheckDefault">
-                      Remember me
-                    </label>
+                <div class="mb-32 w-100">
+                  <label for="email" class="form-label text-sub-500 fw-medium fs-8">Confirm New Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control form-control-lg border-end-0" placeholder="Password"
+                      id="confirm-password" aria-label="Recipient’s username" aria-describedby="basic-addon2">
+                    <span class="input-group-text bg-white border-start-0" onclick="showPassword('confirm-password')"
+                      id="basic-addon2"><i class="icon-eye-off fw-medium "></i></span>
                   </div>
-                  <a href="forgot.html" class="text-primary-500 fw-medium fs-8 text-decoration-none">Forgot
-                    Password?</a>
                 </div>
-                <button type="submit" class="btn btn-primary w-100 btn-lg btn-noah-primary fs-7">Sign In</button>
+                <!-- <button type="submit" class="btn btn-primary w-100 btn-lg btn-noah-primary fs-7">Submit</button> -->
+                <a type="button" class="btn btn-primary w-100 btn-lg btn-noah-primary fs-7"
+                  href="forgot2.html">Submit</a>
               </form>
-              <div class="d-flex align-items-center justify-content-center gap-20 mb-32">
-                <div class="border-1 border-soft-200 flex-grow-1 border-bottom"></div>
-                <p class="text-sub-500 fw-medium fs-8 mb-0">Or login with</p>
-                <div class="border-1 border-soft-200 flex-grow-1 border-bottom"></div>
-              </div>
-              <div class="mb-32 d-flex gap-12 justify-content-between text-center">
-                <a href="#"
-                  class="text-strong-900 fw-medium fs-7 text-decoration-none flex-grow-1 text-center d-flex justify-content-center align-content-center gap-2 border border-1 border-soft-200 rounded-3 p-12">
-                  <img src="../assets/images/logoSocial/google.svg" alt="">
-                  Google
-                </a>
-                <a href="#"
-                  class="text-strong-900 fw-medium fs-7 text-decoration-none flex-grow-1 text-center d-flex justify-content-center align-content-center gap-2 border border-1 border-soft-200 rounded-3 p-12">
-                  <img src="../assets/images/logoSocial/apple.svg" alt="">
-                  Apple
-                </a>
-              </div>
-              <div class="text-center">
-                <p class="text-sub-500 fw-medium fs-8">Don’t have account ? <a href="register.html"
-                    class="text-primary-500 fw-medium fs-8 text-decoration-none">Register</a></p>
-              </div>
             </div>
 
 
-          </div>
-          <div class=" d-flex align-items-center justify-content-between w-100 pt-0 pt-lg-32">
-            <p class="text-sub-500 fw-medium fs-8">© 2025 - Noahlex Power. All Rights Reserved</p>
-            <div class="d-flex align-items-center justify-content-center gap-2">
-              <a href="#" class="fs-8 fw-medium text-sub-500 text-decoration-none">Privacy Policy</a>
-              <div class="p-_5 rounded-circle bg-sub-500"></div>
-              <a href="#" class="fs-8 fw-medium text-sub-500 text-decoration-none">Term & Condition</a>
-            </div>
           </div>
 
         </div>

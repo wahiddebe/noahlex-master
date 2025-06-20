@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Noahlex | Login</title>
+  <title>Noahlex | Register</title>
   <!--begin::Primary Meta Tags-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="title" content="AdminLTE v4 | Dashboard" />
@@ -32,7 +32,11 @@
     integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI=" crossorigin="anonymous" />
   <!--end::Third Party Plugin(Bootstrap Icons)-->
   <!--begin::Required Plugin(AdminLTE)-->
+
   <link rel="stylesheet" href="../../dist/css/adminlte.css" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
   <!--end::Required Plugin(AdminLTE)-->
   <!-- apexcharts -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css"
@@ -41,6 +45,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css"
     integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://wahiddebe.github.io/iconmoon-master/style.css" />
+
+
+  <!--end::Required Plugin(AdminLTE)-->
+  <!-- Styles -->
+
+
+
+
+
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -54,6 +67,77 @@
     background: radial-gradient(100% 100% at 0% 0%, #6589E6 0%, #2356D9 100%);
     box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.2);
   }
+
+  .select2-selection .select2-selection--single {
+    padding: 12px 36px 32px 16px !important;
+    border-radius: 0.5rem !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
+
+  }
+
+  .form-select-lg~.select2-container--bootstrap-5 .select2-selection--single {
+    padding: .75rem 2.25rem 2rem 1rem;
+  }
+
+
+  .form-select-lg~.select2-container--bootstrap-5 .select2-selection {
+    /* padding: 0.75rem 1rem; */
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: .5rem;
+  }
+
+  .select2-container--bootstrap-5 .select2-dropdown .select2-results__options .select2-results__option {
+    padding: .375rem .75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  input,
+  select,
+  textarea {
+    border-radius: 0.5rem;
+    box-shadow: none !important;
+    border-color: #dee2e6 !important;
+
+
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  .select2-container--bootstrap-5.select2-container--focus .select2-selection,
+  .select2-container--bootstrap-5.select2-container--open .select2-selection {
+    border-color: #dee2e6 !important;
+    box-shadow: none;
+  }
+
+  .select2-container--bootstrap-5 .select2-dropdown {
+    /* color: #212529; */
+    background-color: #fff;
+    border-color: #dee2e6;
+    border-radius: .5rem;
+  }
+
+  .select2-selection .select2-selection--multiple {
+    padding: 12px 16px !important;
+    border-radius: 0.5rem !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
+  }
+
+  .form-select-lg~.select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+    padding: .35em .65em;
+    font-size: 0.87rem;
+    line-height: 1.5;
+  }
 </style>
 
 <body class=" bg-white">
@@ -63,37 +147,60 @@
       <div class="col-lg-6">
         <div class="p-3 bg-white d-flex flex-column align-items-center justify-content-end h-100">
           <div class="col-lg-8 col-12 d-flex flex-column align-items-center mb-32">
-            <img src="../assets/images/logo.svg" alt="Noahlex Logo" class="img-fluid mb-32">
-            <h1 class="text-center mb-3 fw-medium">Welcome to <br>
-              <span class="text-primary-500">Noahlex Power</span>
+            <h1 class="text-center mb-3 fw-medium">Enter your information to
+              create an account
             </h1>
-            <p class="text-center text-sub-500 fw-medium mb-32">A Tailored for Energy, Built for Control</p>
+            <p class="text-center text-sub-500 fw-medium mb-32"> Fill your infomation to create an account </p>
             <div class="w-100">
               <form action="" class="mb-32">
+                <div class="mb-3 w-100">
+                  <label for="email" class="form-label text-sub-500 fw-medium fs-8">Full name</label>
+                  <input type="text" class="form-control form-control-lg" id="full-name" placeholder="Full Name"
+                    required>
+                </div>
                 <div class="mb-3 w-100">
                   <label for="email" class="form-label text-sub-500 fw-medium fs-8">Email Address</label>
                   <input type="email" class="form-control form-control-lg" id="email" placeholder="Email Address"
                     required>
                 </div>
                 <div class="mb-3 w-100">
+                  <label for="email" class="form-label text-sub-500 fw-medium fs-8">Company name</label>
+                  <input type="text" class="form-control form-control-lg" id="company-name" placeholder="Company Name"
+                    required>
+                </div>
+                <div class="mb-3 w-100">
+                  <label for="email" class="form-label text-sub-500 fw-medium fs-8">Your Role</label>
+                  <select class="form-select form-select-lg w-100" placeholder="Select role" id="role"
+                    aria-placeholder="Select role" aria-label="Default select example">
+                    <option value="1">Project Manager</option>
+                    <option value="2">Document Controller</option>
+                    <option value="3">Construction Manager / Site Lead</option>
+                    <option value="4">Engineer (Civil / Electrical / Strcutural)</option>
+                    <option value="5">EPC Representative</option>
+                    <option value="6">Developer / Owner Representative</option>
+                    <option value="6">Vendor / Subcontractor</option>
+                    <option value="6">Quality or Commissioning Engineer</option>
+                    <option value="6">O*M Team Member (Post-COD)</option>
+                    <option value="6">Viewer</option>
+                  </select>
+                </div>
+                <div class="mb-3 w-100">
                   <label for="email" class="form-label text-sub-500 fw-medium fs-8">Password</label>
                   <div class="input-group">
-                    <input type="password" class="form-control form-control-lg border-end-0"
-                      placeholder="Recipient’s username" id="password" aria-label="Recipient’s username"
-                      aria-describedby="basic-addon2">
+                    <input type="password" class="form-control form-control-lg border-end-0" placeholder="Password"
+                      id="password" aria-label="Recipient’s username" aria-describedby="basic-addon2">
                     <span class="input-group-text bg-white border-start-0" onclick="showPassword('password')"
                       id="basic-addon2"><i class="icon-eye-off fw-medium "></i></span>
                   </div>
                 </div>
-                <div class=" w-100 d-flex align-items-center justify-content-between mb-32">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label text-sub-500 fw-medium fs-8" for="flexCheckDefault">
-                      Remember me
-                    </label>
+                <div class="mb-4 w-100">
+                  <label for="email" class="form-label text-sub-500 fw-medium fs-8">Confirm Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control form-control-lg border-end-0" placeholder="Password"
+                      id="confirm-password" aria-label="Recipient’s username" aria-describedby="basic-addon2">
+                    <span class="input-group-text bg-white border-start-0" onclick="showPassword('confirm-password')"
+                      id="basic-addon2"><i class="icon-eye-off fw-medium "></i></span>
                   </div>
-                  <a href="forgot.html" class="text-primary-500 fw-medium fs-8 text-decoration-none">Forgot
-                    Password?</a>
                 </div>
                 <button type="submit" class="btn btn-primary w-100 btn-lg btn-noah-primary fs-7">Sign In</button>
               </form>
@@ -115,20 +222,12 @@
                 </a>
               </div>
               <div class="text-center">
-                <p class="text-sub-500 fw-medium fs-8">Don’t have account ? <a href="register.html"
-                    class="text-primary-500 fw-medium fs-8 text-decoration-none">Register</a></p>
+                <p class="text-sub-500 fw-medium fs-8">Already have account? <a href="login.html"
+                    class="text-primary-500 fw-medium fs-8 text-decoration-none">Login</a></p>
               </div>
             </div>
 
 
-          </div>
-          <div class=" d-flex align-items-center justify-content-between w-100 pt-0 pt-lg-32">
-            <p class="text-sub-500 fw-medium fs-8">© 2025 - Noahlex Power. All Rights Reserved</p>
-            <div class="d-flex align-items-center justify-content-center gap-2">
-              <a href="#" class="fs-8 fw-medium text-sub-500 text-decoration-none">Privacy Policy</a>
-              <div class="p-_5 rounded-circle bg-sub-500"></div>
-              <a href="#" class="fs-8 fw-medium text-sub-500 text-decoration-none">Term & Condition</a>
-            </div>
           </div>
 
         </div>
@@ -201,6 +300,7 @@
     integrity="sha256-XPpPaZlU8S/HWf7FZLAncLg2SAkP8ScUTII89x9D3lY=" crossorigin="anonymous"></script>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
   <script>
 
@@ -216,6 +316,18 @@
         return;
       }
     }
+
+    $(document).ready(function () {
+      $('#role').select2(
+        {
+          theme: 'bootstrap-5',
+          placeholder: $(this).data('placeholder'),
+          // closeOnSelect: false,
+          minimumResultsForSearch: -1
+
+        }
+      );
+    });
   </script>
   <!--end::Script-->
 </body>
