@@ -33,6 +33,10 @@
   <!--end::Third Party Plugin(Bootstrap Icons)-->
   <!--begin::Required Plugin(AdminLTE)-->
   <link rel="stylesheet" href="../../dist/css/adminlte.css" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+
   <!--end::Required Plugin(AdminLTE)-->
   <!-- apexcharts -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css"
@@ -267,11 +271,11 @@
             <div class="d-flex gap-12">
               <a href="#" class="btn btn-noah-dashboard ">
                 <span class="icon-users-plus fs-5"></span>
-                Create Project
+                Bulk Assign
               </a>
               <a href="#" class="btn btn-noah-dashboard ">
                 <span class="icon-upload fs-5"></span>
-                Create Project
+                Upload
               </a>
               <a href="#" class="btn btn-noah-dashboard ">
                 <span class="icon-plus fs-5"></span>
@@ -279,7 +283,7 @@
               </a>
               <a href="#" class="btn btn-noah-dashboard ">
                 <span class="icon-clipboard-data fs-5"></span>
-                Create Project
+                View Report
               </a>
             </div>
           </div>
@@ -366,13 +370,159 @@
 
             <div class="tab-content mt-32" id="myTabContent">
               <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="d-flex justify-content-between align-items-center gap-2">
+                <div class="d-flex justify-content-between align-items-center gap-2 mb-4">
                   <h1 class="mb-0 fs-6_5 text-strong-900 fw-medium">Project list</h1>
-                  <div class=""></div>
+                  <div class="d-flex align-items-stretch gap-12">
+                    <div class="p-_5 rounded-2 bg-weak-100 d-flex align-items-center">
+                      <span class="icon-layout-grid p-_5 rounded-1 fs-6 text-soft-400 bg-white"></span>
+                      <span class="icon-list p-_5 rounded-1 fs-6 text-soft-400 "></span>
+
+                    </div>
+                    <div class="border-end border-1 border-soft-200 "> </div>
+                    <a href="#" class="fs-7 fw-medium text-decoration-none text-primary-500">See more</a>
+
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-lg-4 col-12">
+                    <div class="project-card rounded-3 bg-weak-100 p-2">
+                      <div class="p-2 d-flex justify-content-between align-items-center">
+                        <div class="">
+                          <h1 class="fs-6 mb-2">Bayou Wind SE</h1>
+                          <div class="d-flex align-items-center gap-2">
+                            <span class="text-sub-500 fs-8">Westlake</span>
+                            <span class="bg-sub-500 p-_5 rounded-circle"></span>
+                            <span class="text-sub-500 fs-8">Lousiana</span>
+                          </div>
+                        </div>
+                        <a href="" class="text-decoration-none fs-6 text-strong-900">
+                          <i class="icon-dots-vertical"></i>
+                        </a>
+                      </div>
+                      <div class="">
+                        <img src="../assets/images/project/project.svg" class="w-100 rounded-3" height="254px" alt="">
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center p-2">
+                        <p class="text-soft-400 fw-medium fs-7">Project Size: <span class="text-strong-900">100
+                            MW</span>
+                        </p>
+                        <div class="d-flex align-items-center gap-12">
+                          <span class="text-strong-900 fs-7 fw-medium">25%</span>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="d-flex justify-content-between align-items-center gap-2 mb-4">
+                  <h1 class="mb-0 fs-6_5 text-strong-900 fw-medium">Pipeline</h1>
+                  <form class="d-flex justify-content-between align-items-stretch gap-4">
+                    <div class="d-flex align-items-center gap-3">
+                      <p class="text-soft-400 fs-7 fw-medium text-nowrap">Group by</p>
+                      <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
+                        id="role" aria-placeholder="" aria-label="Default select example">
+                        <option value="1">Stage</option>
+                      </select>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <p class="text-soft-400 fs-7 fw-medium">Filter by</p>
+                      <div class="d-flex align-items-center gap-2">
+                        <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
+                          id="role" aria-placeholder="" aria-label="Default select example">
+                          <option value="1">Project Stage</option>
+                        </select>
+                        <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
+                          id="role" aria-placeholder="" aria-label="Default select example">
+                          <option value="1">State</option>
+                        </select>
+                        <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
+                          id="role" aria-placeholder="" aria-label="Default select example">
+                          <option value="1">Teammate</option>
+                        </select>
+                      </div>
 
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <p class="text-soft-400 fs-7 fw-medium">View as</p>
+                      <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
+                        id="role" aria-placeholder="" aria-label="Default select example">
+                        <option value="1">Spreadsheet</option>
+                      </select>
+                    </div>
+                    <div class="border-end border-1 border-soft-200"> </div>
+                    <button
+                      class="btn btn-outline-soft-200 fw-normal text-strong-900 fs-7 d-flex align-items-center gap-2">
+                      <span class="icon-printer fs-6"></span> Export
+                    </button>
+
+                  </form>
+                </div>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <div class="p-4 rounded-4 border border-1 border-soft-200">
+                      <div class="d-flex align-items-center justify-content-between mb-3">
+                        <p class="fs-7 fw-medium text-soft-400 ">Project Locations</p>
+                        <h4 class="text-strong-900 fw-medium d-flex align-items-center gap-2">125 <span
+                            class="fs-7 text-soft-400 my-auto">total
+                            locations</span></h4>
+                      </div>
+                      <div class="mapouter" style="position:relative; text-align:right; width:100%; height:450px;">
+                        <div class="gmap_canvas w-100"
+                          style="overflow:hidden; background:none!important; width:100% !important; height:450px;">
+                          <iframe width="100%" class="w-100" height="450px" style="border:0;width: 100% !important;"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps/embed/v1/search?q=canada&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                        </div>
+                        <a href="https://norsumediagroup.com/embed-google-map-website-free" target="_blank"
+                          rel="noopener noreferrer" class="gme-generated-link">Embed Map on Website for Free</a>
+                        <style>
+                          .mapouter {
+                            position: relative;
+                            text-align: right;
+                          }
+
+                          .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                          }
+
+                          .gmap_canvas iframe {
+                            width: 100%;
+                            height: 100%;
+                          }
+
+                          .mapouter a {
+                            display: block;
+                            font-size: 0.85em;
+                            text-align: center;
+                            padding: 5px 0;
+                            color: #6c757d;
+                            text-decoration: none;
+                          }
+
+                          .gme-generated-link {
+                            display: none !important;
+                          }
+                        </style>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="p-4 rounded-4 border border-1 border-soft-200">
+                      <p class="fs-7 fw-medium text-soft-400 mb-3">MW Breakdown by Project Stage</p>
+                      <div id="chart"></div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="p-4 rounded-4 border border-1 border-soft-200">
+                      <p class="fs-7 fw-medium text-soft-400 mb-3">MW Breakdown by COD year</p>
+                      <div id="chart2"></div>
+
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -443,175 +593,174 @@
   <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js"
     integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous"></script>
   <!-- ChartJS -->
-  <script>
-    // NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
-    // IT'S ALL JUST JUNK FOR DEMO
-    // ++++++++++++++++++++++++++++++++++++++++++
 
-    const sales_chart_options = {
-      series: [
-        {
-          name: 'Digital Goods',
-          data: [28, 48, 40, 19, 86, 27, 90],
-        },
-        {
-          name: 'Electronics',
-          data: [65, 59, 80, 81, 56, 55, 40],
-        },
-      ],
-      chart: {
-        height: 300,
-        type: 'area',
-        toolbar: {
-          show: false,
-        },
-      },
-      legend: {
-        show: false,
-      },
-      colors: ['#0d6efd', '#20c997'],
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        curve: 'smooth',
-      },
-      xaxis: {
-        type: 'datetime',
-        categories: [
-          '2023-01-01',
-          '2023-02-01',
-          '2023-03-01',
-          '2023-04-01',
-          '2023-05-01',
-          '2023-06-01',
-          '2023-07-01',
-        ],
-      },
-      tooltip: {
-        x: {
-          format: 'MMMM yyyy',
-        },
-      },
-    };
-
-    const sales_chart = new ApexCharts(
-      document.querySelector('#revenue-chart'),
-      sales_chart_options,
-    );
-    sales_chart.render();
-  </script>
   <!-- jsvectormap -->
   <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js"
     integrity="sha256-/t1nN2956BT869E6H4V1dnt0X5pAQHPytli+1nTZm2Y=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js"
     integrity="sha256-XPpPaZlU8S/HWf7FZLAncLg2SAkP8ScUTII89x9D3lY=" crossorigin="anonymous"></script>
+
+
   <!-- jsvectormap -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script>
-    const visitorsData = {
-      US: 398, // USA
-      SA: 400, // Saudi Arabia
-      CA: 1000, // Canada
-      DE: 500, // Germany
-      FR: 760, // France
-      CN: 300, // China
-      AU: 700, // Australia
-      BR: 600, // Brazil
-      IN: 800, // India
-      GB: 320, // Great Britain
-      RU: 3000, // Russia
-    };
+    $(document).ready(function () {
+      $('.filter').select2(
+        {
+          theme: 'bootstrap-5',
+          placeholder: $(this).data('placeholder'),
+          // closeOnSelect: false,
+          minimumResultsForSearch: -1
 
-    // World map by jsVectorMap
-    const map = new jsVectorMap({
-      selector: '#world-map',
-      map: 'world',
+        }
+      );
     });
-
-    // Sparkline charts
-    const option_sparkline1 = {
-      series: [
-        {
-          data: [1000, 1200, 920, 927, 931, 1027, 819, 930, 1021],
-        },
-      ],
+    var options = {
+      series: [{
+        name: 'Wind',
+        data: [200, 400, 300, 500],
+        color: '#2457D9'
+      }, {
+        name: 'Solar',
+        data: [100, 200, 400, 300],
+        color: '#A7C6FB'
+      }, {
+        name: 'BESS',
+        data: [800, 600, 700, 900],
+        color: '#E2E8F0'
+      },],
       chart: {
-        type: 'area',
-        height: 50,
-        sparkline: {
-          enabled: true,
+        type: 'bar',
+        height: 350,
+        stacked: true,
+        toolbar: {
+          show: false
+        },
+        zoom: {
+          enabled: false
+        },
+
+      },
+
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          legend: {
+            position: 'bottom',
+            offsetX: -10,
+            offsetY: 0
+          }
+        }
+      }],
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          borderRadius: 0,
+          borderRadiusApplication: 'end', // 'around', 'end'
+          borderRadiusWhenStacked: 'last', // 'all', 'last'
+          dataLabels: {
+            total: {
+              enabled: false,
+              style: {
+                fontSize: '13px',
+                fontWeight: 900
+              }
+            }
+          }
         },
       },
-      stroke: {
-        curve: 'straight',
+      xaxis: {
+        categories: ['Feasibility', 'NTP', 'Mechanical Completion', 'FinalCompletion'],
+      },
+      legend: {
+        position: 'bottom',
+        offsetY: 0,
+        horizontalAlign: 'center',
+        fontSize: '14px',
+        fontWeight: 500,
       },
       fill: {
-        opacity: 0.3,
-      },
-      yaxis: {
-        min: 0,
-      },
-      colors: ['#DCE6EC'],
+        opacity: 1
+      }
     };
 
-    const sparkline1 = new ApexCharts(document.querySelector('#sparkline-1'), option_sparkline1);
-    sparkline1.render();
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+  </script>
+  <script>
 
-    const option_sparkline2 = {
-      series: [
-        {
-          data: [515, 519, 520, 522, 652, 810, 370, 627, 319, 630, 921],
-        },
-      ],
+    var options = {
+      series: [{
+        name: 'Wind',
+        data: [200, 400],
+        color: '#2457D9'
+      }, {
+        name: 'Solar',
+        data: [100, 200],
+        color: '#A7C6FB'
+      }, {
+        name: 'BESS',
+        data: [800, 600],
+        color: '#E2E8F0'
+      },],
       chart: {
-        type: 'area',
-        height: 50,
-        sparkline: {
-          enabled: true,
+        type: 'bar',
+        height: 350,
+        stacked: true,
+        toolbar: {
+          show: false
+        },
+        zoom: {
+          enabled: false
+        },
+
+      },
+
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          legend: {
+            position: 'bottom',
+            offsetX: -10,
+            offsetY: 0
+          }
+        }
+      }],
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          borderRadius: 0,
+          borderRadiusApplication: 'end', // 'around', 'end'
+          borderRadiusWhenStacked: 'last', // 'all', 'last'
+          dataLabels: {
+            total: {
+              enabled: false,
+              style: {
+                fontSize: '13px',
+                fontWeight: 900
+              }
+            }
+          }
         },
       },
-      stroke: {
-        curve: 'straight',
+      xaxis: {
+        categories: ['2024', '2025'],
+      },
+      legend: {
+        position: 'bottom',
+        offsetY: 0,
+        horizontalAlign: 'center',
+        fontSize: '14px',
+        fontWeight: 500,
       },
       fill: {
-        opacity: 0.3,
-      },
-      yaxis: {
-        min: 0,
-      },
-      colors: ['#DCE6EC'],
+        opacity: 1
+      }
     };
 
-    const sparkline2 = new ApexCharts(document.querySelector('#sparkline-2'), option_sparkline2);
-    sparkline2.render();
-
-    const option_sparkline3 = {
-      series: [
-        {
-          data: [15, 19, 20, 22, 33, 27, 31, 27, 19, 30, 21],
-        },
-      ],
-      chart: {
-        type: 'area',
-        height: 50,
-        sparkline: {
-          enabled: true,
-        },
-      },
-      stroke: {
-        curve: 'straight',
-      },
-      fill: {
-        opacity: 0.3,
-      },
-      yaxis: {
-        min: 0,
-      },
-      colors: ['#DCE6EC'],
-    };
-
-    const sparkline3 = new ApexCharts(document.querySelector('#sparkline-3'), option_sparkline3);
-    sparkline3.render();
+    var chart = new ApexCharts(document.querySelector("#chart2"), options);
+    chart.render();
   </script>
   <!--end::Script-->
 </body>
