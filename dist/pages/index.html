@@ -7,7 +7,7 @@
   <title>Noahlex</title>
   <!--begin::Primary Meta Tags-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="title" content="AdminLTE v4 | Dashboard" />
+  <meta name="title" content="Noahlex | Dashboard" />
   <meta name="author" content="ColorlibHQ" />
   <meta name="description"
     content="Noahlex is a modern and responsive admin dashboard template built with Bootstrap 5." />
@@ -22,6 +22,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
+  <link href="https://db.onlinewebfonts.com/c/d95bf2f30035a050142565e03d44da71?family=Aeonik" rel="stylesheet">
   <!--end::Fonts-->
   <!--begin::Third Party Plugin(OverlayScrollbars)-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/styles/overlayscrollbars.min.css"
@@ -374,8 +375,10 @@
                   <h1 class="mb-0 fs-6_5 text-strong-900 fw-medium">Project list</h1>
                   <div class="d-flex align-items-stretch gap-12">
                     <div class="p-_5 rounded-2 bg-weak-100 d-flex align-items-center">
-                      <span class="icon-layout-grid p-_5 rounded-1 fs-6 text-soft-400 bg-white"></span>
-                      <span class="icon-list p-_5 rounded-1 fs-6 text-soft-400 "></span>
+                      <span id="project-grid-toggle" class="icon-layout-grid p-_5 rounded-1 fs-6 text-soft-400 bg-white"
+                        onclick="showGrid()"></span>
+                      <span id="project-list-toggle" class="icon-list p-_5 rounded-1 fs-6 text-soft-400 "
+                        onclick="showList()"></span>
 
                     </div>
                     <div class="border-end border-1 border-soft-200 "> </div>
@@ -383,33 +386,68 @@
 
                   </div>
                 </div>
-                <div class="row g-3">
-                  <div class="col-lg-4 col-12">
-                    <div class="project-card rounded-3 bg-weak-100 p-2">
-                      <div class="p-2 d-flex justify-content-between align-items-center">
+                <div class="" id="project-grid">
+                  <div class="row g-3">
+                    <div class="col-lg-4 col-12">
+                      <div class="project-card rounded-3 bg-weak-100 p-2">
+                        <div class="p-2 d-flex justify-content-between align-items-center">
+                          <div class="">
+                            <h1 class="fs-6 mb-2">Bayou Wind SE</h1>
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="text-sub-500 fs-8">Westlake</span>
+                              <span class="bg-sub-500 p-_5 rounded-circle"></span>
+                              <span class="text-sub-500 fs-8">Lousiana</span>
+                            </div>
+                          </div>
+                          <a href="" class="text-decoration-none fs-6 text-strong-900">
+                            <i class="icon-dots-vertical"></i>
+                          </a>
+                        </div>
                         <div class="">
-                          <h1 class="fs-6 mb-2">Bayou Wind SE</h1>
-                          <div class="d-flex align-items-center gap-2">
-                            <span class="text-sub-500 fs-8">Westlake</span>
-                            <span class="bg-sub-500 p-_5 rounded-circle"></span>
-                            <span class="text-sub-500 fs-8">Lousiana</span>
+                          <img src="../assets/images/project/project.svg" class="w-100 rounded-3" height="254px" alt="">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center p-2">
+                          <p class="text-soft-400 fw-medium fs-7">Project Size: <span class="text-strong-900">100
+                              MW</span>
+                          </p>
+                          <div class="d-flex align-items-center gap-12">
+                            <span class="text-strong-900 fs-7 fw-medium">25%</span>
+
                           </div>
                         </div>
-                        <a href="" class="text-decoration-none fs-6 text-strong-900">
-                          <i class="icon-dots-vertical"></i>
-                        </a>
                       </div>
-                      <div class="">
-                        <img src="../assets/images/project/project.svg" class="w-100 rounded-3" height="254px" alt="">
-                      </div>
-                      <div class="d-flex justify-content-between align-items-center p-2">
-                        <p class="text-soft-400 fw-medium fs-7">Project Size: <span class="text-strong-900">100
-                            MW</span>
-                        </p>
-                        <div class="d-flex align-items-center gap-12">
-                          <span class="text-strong-900 fs-7 fw-medium">25%</span>
+                    </div>
+                  </div>
+                </div>
 
+                <div class="d-none" id="project-list">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <div class="project-card rounded-3 bg-weak-100 p-2">
+                        <div class="p-2 d-flex justify-content-between align-items-center">
+                          <div class="">
+                            <h1 class="fs-6 mb-2">Bayou Wind SE</h1>
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="text-sub-500 fs-8">Westlake</span>
+                              <span class="bg-sub-500 p-_5 rounded-circle"></span>
+                              <span class="text-sub-500 fs-8">Lousiana</span>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center gap-12 p-2">
+                            <p class="text-soft-400 fw-medium fs-7">Project Size: <span class="text-strong-900">100
+                                MW</span>
+                            </p>
+                            <div class="border-end border-1 border-soft-200 align-self-stretch"> </div>
+
+                            <div class="d-flex align-items-center gap-12">
+                              <span class="text-strong-900 fs-7 fw-medium">25%</span>
+                            </div>
+                            <a href="" class="text-decoration-none fs-6 text-strong-900">
+                              <i class="icon-dots-vertical"></i>
+                            </a>
+                          </div>
                         </div>
+
                       </div>
                     </div>
                   </div>
@@ -761,6 +799,21 @@
 
     var chart = new ApexCharts(document.querySelector("#chart2"), options);
     chart.render();
+  </script>
+  <script>
+    function showGrid() {
+      $('#project-list').addClass('d-none');
+      $('#project-grid').removeClass('d-none');
+      $('#project-grid-toggle').addClass('bg-white');
+      $('#project-list-toggle').removeClass('bg-white');
+    }
+
+    function showList() {
+      $('#project-grid').addClass('d-none');
+      $('#project-list').removeClass('d-none');
+      $('#project-list-toggle').addClass('bg-white');
+      $('#project-grid-toggle').removeClass('bg-white');
+    }
   </script>
   <!--end::Script-->
 </body>
