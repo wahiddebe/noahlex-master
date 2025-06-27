@@ -8,6 +8,8 @@ p{
     font-weight: bold !important;
   }
 
+
+
   .btn-noah-dashboard{
     display: flex;
     align-items: center;
@@ -21,6 +23,13 @@ p{
     padding: .75rem 1rem;
     box-shadow: 0px 14px 14px -10px rgba(0, 0, 0, 0.25);
 
+  }
+
+  .border-black-08{
+    border-color: #00000008 !important;
+  }
+  .border-_5{
+    border-width: 0.5px !important;
   }
 .text-white-60{
     color: rgb(255, 255, 255, 0.6) !important;
@@ -106,7 +115,20 @@ p{
     font-size: 0.87rem;
     line-height: 1.5;
   }
+  [data-overlayscrollbars-viewport~=overflowXScroll] {
+    overflow-x: visible !important;
+}
+[data-overlayscrollbars-viewport~=overflowYHidden]
+ {
+    overflow-y: visible !important;
+}
 
+[data-overlayscrollbars-viewport~=overflowXScroll] {
+    overflow-x: scroll !important;
+}
+[data-overlayscrollbars-padding], [data-overlayscrollbars-viewport], [data-overlayscrollbars] {
+    overflow: visible !important;
+}
 
 .sidebar-mini.sidebar-collapse .app-sidebar:hover {
     min-width: auto;
@@ -201,3 +223,14 @@ p{
   /* .project-card {
     min-height: 367px;
   } */
+
+
+  .btn-notif{
+    border:none;
+    color:#868C98;
+    border-radius: 0;
+  }
+  .btn-notif.active{
+    border-bottom: 1.5px solid #2457D9;
+    color: #2356D9;
+  }
