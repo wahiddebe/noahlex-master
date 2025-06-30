@@ -114,13 +114,12 @@
       <!--begin::Sidebar Wrapper-->
       <div class="sidebar-wrapper">
         <nav class="mt-2">
-          <a href="login.html">
-            <button type="button" role="button"
-              class="mb-4 btn btn-outline-primary w-100 btn-lg btn-noah-outline-primary fs-7">
-              <span class="fs-5 icon-upload align-middle"></span>
-              <span class="align-middle nav-button-text ms-2">Upload</span>
-            </button>
-          </a>
+          <button data-bs-toggle="modal" data-bs-target="#uploadModal" type="button" role="button"
+            class="mb-4 btn btn-outline-primary w-100 btn-lg btn-noah-outline-primary fs-7">
+            <span class="fs-5 icon-upload align-middle"></span>
+            <span class="align-middle nav-button-text ms-2">Upload</span>
+          </button>
+
           <!--begin::Sidebar Menu-->
           <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
             <!-- <li class="nav-item menu-open">
@@ -687,12 +686,111 @@
               </div>
             </div>
           </div>
+
         </div>
         <!--end::Container-->
       </div>
       <!--end::App Content-->
     </main>
     <!--end::App Main-->
+    <!-- Modal -->
+    <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0 p-4">
+            <h1 class="modal-title fs-5 fw-medium text-strong-900" id="exampleModalLabel">Upload File</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <form action="">
+              <div class="row g-3">
+                <div class="col-lg-6 col-12">
+                  <div class="">
+                    <label for="email" class="form-label text-sub-500 fw-medium fs-8">Document Name</label>
+                    <input type="text" class="form-control form-control-lg" id="docName" placeholder="Input area"
+                      required>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="w-100">
+                    <label for="project" class="form-label text-sub-500 fw-medium fs-8">Project Selection</label>
+                    <select class="form-select form-select-lg w-100" placeholder="Select Project" id="project"
+                      aria-placeholder="Select Project" aria-label="Default select example">
+                      <option value="1">Project Manager</option>
+                      <option value="2">Document Controller</option>
+                      <option value="3">Construction Manager / Site Lead</option>
+                      <option value="4">Engineer (Civil / Electrical / Strcutural)</option>
+                      <option value="5">EPC Representative</option>
+                      <option value="6">Developer / Owner Representative</option>
+                      <option value="6">Vendor / Subcontractor</option>
+                      <option value="6">Quality or Commissioning Engineer</option>
+                      <option value="6">O*M Team Member (Post-COD)</option>
+                      <option value="6">Viewer</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="w-100">
+                    <label for="tags" class="form-label text-sub-500 fw-medium fs-8">Document Tags</label>
+                    <select class="form-select form-select-lg w-100" placeholder="Select Tags" id="tags"
+                      aria-placeholder="Select Tags" aria-label="Default select example" multiple>
+                      <option value="1">Project Manager</option>
+                      <option value="2">Document Controller</option>
+                      <option value="3">Construction Manager / Site Lead</option>
+                      <option value="4">Engineer (Civil / Electrical / Strcutural)</option>
+                      <option value="5">EPC Representative</option>
+                      <option value="6">Developer / Owner Representative</option>
+                      <option value="6">Vendor / Subcontractor</option>
+                      <option value="6">Quality or Commissioning Engineer</option>
+                      <option value="6">O*M Team Member (Post-COD)</option>
+                      <option value="6">Viewer</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="form-check text-sub-500 fw-medium fs-7">
+                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                    <label class="form-check-label" for="checkDefault">
+                      Notify by teams <span class="icon-info-circle text-soft-400 align-middle fs-6"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="form-check text-sub-500 fw-medium fs-7">
+                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                    <label class="form-check-label" for="checkDefault">
+                      Approval is needed
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="py-2">
+                    <label for="uploadfile" class="form-label text-sub-500 fw-medium fs-8">Upload File</label>
+                    <input class="form-control" type="file" id="uploadfile" hidden>
+                    <label for="uploadfile"
+                      class="w-100 d-flex justify-content-center align-items-center gap-3 flex-column py-5 border border-1 border-soft-200 rounded-3">
+                      <span class="icon-upload text-sub-500 fs-3"></span>
+                      <div class="">
+                        <p class="fs-7 fw-medium text-sub-500"><span class="text-primary-500 fw-bold">Click to
+                            upload</span> or
+                          <span class="fw-bold">drag and drop here</span>
+                        </p>
+                        <p class="fs-7 fw-medium text-sub-500">SVG, PNG, JPG or GIF (max. 1200x800px)</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer border-0 p-4 d-flex align-items-center gap-2">
+            <button type="button" class="btn btn-outline-soft-200 text-strong-900"
+              data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary btn-noah-primary">Upload</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <!--end::App Wrapper-->
   <!--begin::Script-->
@@ -773,6 +871,28 @@
           placeholder: $(this).data('placeholder'),
           // closeOnSelect: false,
           minimumResultsForSearch: -1
+
+        }
+      );
+      $('#project').select2(
+        {
+          theme: 'bootstrap-5',
+          placeholder: $(this).data('placeholder'),
+          // closeOnSelect: false,
+          minimumResultsForSearch: -1,
+          dropdownAutoWidth: true,
+          width: '100%',
+
+        }
+      );
+      $('#tags').select2(
+        {
+          theme: 'bootstrap-5',
+          placeholder: $(this).data('placeholder'),
+          // closeOnSelect: false,
+          minimumResultsForSearch: -1,
+          dropdownAutoWidth: true,
+          width: '100%',
 
         }
       );
