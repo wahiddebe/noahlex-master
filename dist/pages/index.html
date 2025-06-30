@@ -114,13 +114,12 @@
       <!--begin::Sidebar Wrapper-->
       <div class="sidebar-wrapper">
         <nav class="mt-2">
-          <a href="login.html">
-            <button type="button" role="button"
-              class="mb-4 btn btn-outline-primary w-100 btn-lg btn-noah-outline-primary fs-7">
-              <span class="fs-5 icon-upload align-middle"></span>
-              <span class="align-middle nav-button-text ms-2">Upload</span>
-            </button>
-          </a>
+          <button data-bs-toggle="modal" data-bs-target="#uploadModal" type="button" role="button"
+            class="mb-4 btn btn-outline-primary w-100 btn-lg btn-noah-outline-primary fs-7">
+            <span class="fs-5 icon-upload align-middle"></span>
+            <span class="align-middle nav-button-text ms-2">Upload</span>
+          </button>
+
           <!--begin::Sidebar Menu-->
           <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
             <!-- <li class="nav-item menu-open">
@@ -687,12 +686,32 @@
               </div>
             </div>
           </div>
+
         </div>
         <!--end::Container-->
       </div>
       <!--end::App Content-->
     </main>
     <!--end::App Main-->
+    <!-- Modal -->
+    <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0 p-4">
+            <h1 class="modal-title fs-5 fw-medium text-strong-900" id="exampleModalLabel">Upload File</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <form action=""></form>
+          </div>
+          <div class="modal-footer border-0 p-4 d-flex align-items-center gap-2">
+            <button type="button" class="btn btn-outline-soft-200 text-strong-900"
+              data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary btn-noah-primary">Upload</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <!--end::App Wrapper-->
   <!--begin::Script-->
