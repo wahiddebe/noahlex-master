@@ -262,3 +262,7 @@ p{
     border-bottom: 1.5px solid #2457D9;
     color: #2356D9;
   }
+
+  .toast{
+    min-width: 500px;
+  }
