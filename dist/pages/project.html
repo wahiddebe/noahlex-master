@@ -420,13 +420,14 @@
 
             </div>
           </div>
-          <div class="rounded-4 bg-weak-100 p-12 mb-2">
+          <div class="rounded-4 bg-weak-100 p-12 mb-4">
             <div class="d-flex align-items-center justify-content-between mb-3">
               <p class=" text-sub-500 fs-6 fw-medium">Alabama</p>
               <button type="button" data-bs-toggle="modal" data-bs-target="#addfolderModal"
                 class="btn btn-primary btn-noah-primary btn-sm fs-8 d-flex align-items-center gap-2">
                 <span class="icon-plus fs-6 "></span> Add Folder</button>
             </div>
+
             <div class="row g-3" id="row-folders">
               <div class="col-12 col-lg-3">
                 <div
@@ -598,6 +599,23 @@
         </div>
       </div>
     </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container position-fixed top-0 end-0 p-20">
+      <div id="liveToast" class="toast w-auto bg-white rounded-3 p-3 border border-1 border-soft-200" role="alert"
+        aria-live="assertive" aria-atomic="true">
+        <div class="d-flex justify-content-between align-items-center gap-2">
+          <div class="d-flex align-items-center gap-12">
+            <span class="icon-circle-check-filled fs-6_5 text-success-700"></span>
+            <p class="fs-6 text-strong-900 fw-medium text-nowrap" id="Livetoast-text">
+            </p>
+          </div>
+          <button type=" button" class="bg-white p-0 border-0 icon-x text-soft-400 fs-6" data-bs-dismiss="toast"
+            aria-label="Close"></button>
+        </div>
+
+      </div>
+    </div>
   </div>
   <!--end::App Wrapper-->
   <!--begin::Script-->
@@ -670,186 +688,8 @@
   <!-- jsvectormap -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.filter').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1
 
-        }
-      );
-      $('#project').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1,
-          dropdownAutoWidth: true,
-          width: '100%',
 
-        }
-      );
-      $('#tags').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1,
-          dropdownAutoWidth: true,
-          width: '100%',
-
-        }
-      );
-    });
-    var options = {
-      series: [{
-        name: 'Wind',
-        data: [200, 400, 300, 500],
-        color: '#2457D9'
-      }, {
-        name: 'Solar',
-        data: [100, 200, 400, 300],
-        color: '#A7C6FB'
-      }, {
-        name: 'BESS',
-        data: [800, 600, 700, 900],
-        color: '#E2E8F0'
-      },],
-      chart: {
-        type: 'bar',
-        height: 350,
-        stacked: true,
-        toolbar: {
-          show: false
-        },
-        zoom: {
-          enabled: false
-        },
-
-      },
-
-      responsive: [{
-        breakpoint: 480,
-        options: {
-          legend: {
-            position: 'bottom',
-            offsetX: -10,
-            offsetY: 0
-          }
-        }
-      }],
-      plotOptions: {
-        bar: {
-          horizontal: false,
-          borderRadius: 0,
-          borderRadiusApplication: 'end', // 'around', 'end'
-          borderRadiusWhenStacked: 'last', // 'all', 'last'
-          dataLabels: {
-            total: {
-              enabled: false,
-              style: {
-                fontSize: '13px',
-                fontWeight: 900
-              }
-            }
-          }
-        },
-      },
-      xaxis: {
-        categories: ['Feasibility', 'NTP', 'Mechanical Completion', 'FinalCompletion'],
-      },
-      legend: {
-        position: 'bottom',
-        offsetY: 0,
-        horizontalAlign: 'center',
-        fontSize: '14px',
-        fontWeight: 500,
-      },
-      fill: {
-        opacity: 1
-      }
-    };
-
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
-  </script>
-  <script>
-
-    var options = {
-      series: [{
-        name: 'Wind',
-        data: [200, 400],
-        color: '#2457D9'
-      }, {
-        name: 'Solar',
-        data: [100, 200],
-        color: '#A7C6FB'
-      }, {
-        name: 'BESS',
-        data: [800, 600],
-        color: '#E2E8F0'
-      },],
-      chart: {
-        type: 'bar',
-        height: 350,
-        stacked: true,
-        toolbar: {
-          show: false
-        },
-        zoom: {
-          enabled: false
-        },
-
-      },
-
-      responsive: [{
-        breakpoint: 480,
-        options: {
-          legend: {
-            position: 'bottom',
-            offsetX: -10,
-            offsetY: 0
-          }
-        }
-      }],
-      plotOptions: {
-        bar: {
-          horizontal: false,
-          borderRadius: 0,
-          borderRadiusApplication: 'end', // 'around', 'end'
-          borderRadiusWhenStacked: 'last', // 'all', 'last'
-          dataLabels: {
-            total: {
-              enabled: false,
-              style: {
-                fontSize: '13px',
-                fontWeight: 900
-              }
-            }
-          }
-        },
-      },
-      xaxis: {
-        categories: ['2024', '2025'],
-      },
-      legend: {
-        position: 'bottom',
-        offsetY: 0,
-        horizontalAlign: 'center',
-        fontSize: '14px',
-        fontWeight: 500,
-      },
-      fill: {
-        opacity: 1
-      }
-    };
-
-    var chart = new ApexCharts(document.querySelector("#chart2"), options);
-    chart.render();
-  </script>
   <script>
     function showGrid() {
       $('#project-list').addClass('d-none');
@@ -885,10 +725,10 @@
   </script>
 
   <script>
+
     function saveFolder() {
       const folderName = document.getElementById('folderName').value;
       if (folderName.trim() === '') {
-        alert('Please enter a folder name.');
         return;
       }
 
@@ -907,7 +747,26 @@
       rowFolders.appendChild(newFolder);
       document.getElementById('folderName').value = '';
       $('#addfolderModal').modal('hide');
+      const livetoasttext = document.getElementById('Livetoast-text');
+      livetoasttext.textContent = `New folder: ${folderName} added successfully`;
+      const toastLiveExample = document.getElementById('liveToast')
+      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+      toastBootstrap.show()
+
     }
+  </script>
+
+  <script>
+
+    // const toastTrigger = document.getElementById('liveToastBtn')
+    // const toastLiveExample = document.getElementById('liveToast')
+
+    // if (toastTrigger) {
+    //   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    //   toastTrigger.addEventListener('click', () => {
+    //     toastBootstrap.show()
+    //   })
+    // }
   </script>
   <!--end::Script-->
 </body>
