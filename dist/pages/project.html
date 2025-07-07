@@ -381,16 +381,18 @@
     <!--begin::App Main-->
     <main class="app-main">
       <!--begin::App Content Header-->
-      <div class="app-content-header mb-4 border-bottom border-1 border-soft-200-70 py-4">
+      <div class="app-content-header py-4">
         <!--begin::Container-->
         <div class="container-fluid">
           <!--begin::Row-->
-          <div class="gap-12 d-flex align-items-center">
-            <a href="index.html" class="text-sub-500 icon-arrow-left fs-6_5 text-decoration-none">
-            </a>
-            <p class="text-soft-400 fw-medium fs-6_5">Dashboard</p>
-            <p class="text-soft-400 fw-medium fs-6_5">/</p>
-            <p class="text-strong-900 fw-medium fs-6_5">Alabama BESS</p>
+          <div class="d-flex align-items-center justify-content-between gap-2">
+            <div class="">
+              <h4 class="text-strong-900 fw-medium mb-2">Projects</h4>
+            <p class="text-soft-400 fw-medium fs-7">See all your projects here</p>
+            </div>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#createProjectModal"
+            class="btn btn-primary btn-noah-primary btn-sm fs-8 d-flex align-items-center gap-2">
+            <span class="icon-plus fs-6 "></span> Add Project</button>
           </div>
           <!--end::Row-->
         </div>
@@ -401,67 +403,217 @@
       <div class="app-content">
         <!--begin::Container-->
         <div class="container-fluid">
-          <div class="mb-4">
-            <div class="d-flex gap-3 mb-2 align-items-center">
-              <h4 class="text-strong-900 fw-medium">Alabama BESS</h4>
-              <div
-                class="d-flex gap-2 align-items-center justify-content-center py-2 px-12 border border-1 border-soft-200 rounded-pill">
-                <div class="p-1  bg-neutral-500 rounded-circle">
-                </div>
-                <p class=" text-neutral-500 fs-8 fw-medium">Feasibility</p>
-              </div>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-              <p class=" text-soft-400 fs-6 fw-medium">Ackerville</p>
-              <div class="p-1  bg-soft-400 rounded-circle">
-              </div>
-              <p class=" text-soft-400 fs-6 fw-medium">Alabama</p>
+          <div class="dashboard-tab">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link border-top-0 border-end-0 border-start-0 border-bottom active" id="home-tab"
+                  data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                  aria-selected="true">Project List</button>
+              </li>
 
+              <li class="nav-item" role="presentation">
+                <button class="nav-link border-top-0 border-end-0 border-start-0 border-bottom" id="contact-tab"
+                  data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact"
+                  aria-selected="false">Pipeline</button>
+              </li>
+            </ul>
 
-            </div>
-          </div>
-          <div class="rounded-4 bg-weak-100 p-12 mb-4">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <p class=" text-sub-500 fs-6 fw-medium">Alabama</p>
-              <button type="button" data-bs-toggle="modal" data-bs-target="#addfolderModal"
-                class="btn btn-primary btn-noah-primary btn-sm fs-8 d-flex align-items-center gap-2">
-                <span class="icon-plus fs-6 "></span> Add Folder</button>
-            </div>
+            <div class="tab-content mt-32" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="d-flex justify-content-between align-items-center gap-2 mb-4">
+                  <h1 class="mb-0 fs-6_5 text-strong-900 fw-medium">Project list</h1>
+                  <div class="d-flex align-items-stretch gap-12">
+                    <div class="p-_5 rounded-2 bg-weak-100 d-flex align-items-center">
+                      <span id="project-grid-toggle" class="icon-layout-grid p-_5 rounded-1 fs-6 text-soft-400 bg-white"
+                        onclick="showGrid()"></span>
+                      <span id="project-list-toggle" class="icon-list p-_5 rounded-1 fs-6 text-soft-400 "
+                        onclick="showList()"></span>
 
-            <div class="row g-3" id="row-folders">
-              <div class="col-12 col-lg-3">
-                <div
-                  class="p-3 gap-12 d-flex align-items-center justify-content-between bg-white border border-1 border-soft-200 rounded-3">
-                  <div class="d-flex align-items-center gap-12">
-                    <span class="icon-folder h4 text-primary-500"></span>
-                    <p class="text-strong-900 fs-7 fw-medium">Cool Folder</p>
+                    </div>
+                    <div class="border-end border-1 border-soft-200 "> </div>
+                    <a href="#" class="fs-7 fw-medium text-decoration-none text-primary-500">See more</a>
+
                   </div>
-                  <span class="icon-grip-vertical fs-6_5 text-soft-400"></span>
+                </div>
+                <div class="" id="project-grid">
+                  <div class="row g-3">
+                    <div class="col-lg-4 col-12">
+                      <div class="project-card rounded-3 bg-weak-100 p-2">
+                        <div class="p-2 d-flex justify-content-between align-items-center">
+                          <div class="">
+                            <h1 class="fs-6 mb-2">Bayou Wind SE</h1>
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="text-sub-500 fs-8">Westlake</span>
+                              <span class="bg-sub-500 p-_5 rounded-circle"></span>
+                              <span class="text-sub-500 fs-8">Lousiana</span>
+                            </div>
+                          </div>
+                          <a href="" class="text-decoration-none fs-6 text-strong-900">
+                            <i class="icon-dots-vertical"></i>
+                          </a>
+                        </div>
+                        <div class="">
+                          <img src="../assets/images/project/project.svg" class="w-100 rounded-3" height="254px" alt="">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center p-2">
+                          <p class="text-soft-400 fw-medium fs-7">Project Size: <span class="text-strong-900">100
+                              MW</span>
+                          </p>
+                          <div class="d-flex align-items-center gap-12">
+                            <span class="text-strong-900 fs-7 fw-medium">25%</span>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-none" id="project-list">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <div class="project-card rounded-3 bg-weak-100 p-2">
+                        <div class="p-2 d-flex justify-content-between align-items-center">
+                          <div class="">
+                            <h1 class="fs-6 mb-2">Bayou Wind SE</h1>
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="text-sub-500 fs-8">Westlake</span>
+                              <span class="bg-sub-500 p-_5 rounded-circle"></span>
+                              <span class="text-sub-500 fs-8">Lousiana</span>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center gap-12 p-2">
+                            <p class="text-soft-400 fw-medium fs-7">Project Size: <span class="text-strong-900">100
+                                MW</span>
+                            </p>
+                            <div class="border-end border-1 border-soft-200 align-self-stretch"> </div>
+
+                            <div class="d-flex align-items-center gap-12">
+                              <span class="text-strong-900 fs-7 fw-medium">25%</span>
+                            </div>
+                            <a href="" class="text-decoration-none fs-6 text-strong-900">
+                              <i class="icon-dots-vertical"></i>
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="d-flex justify-content-between align-items-center gap-2 mb-4">
+                  <h1 class="mb-0 fs-6_5 text-strong-900 fw-medium">Pipeline</h1>
+                  <form class="d-flex justify-content-between align-items-stretch gap-4">
+                    <div class="d-flex align-items-center gap-3">
+                      <p class="text-soft-400 fs-7 fw-medium text-nowrap">Group by</p>
+                      <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
+                        id="role" aria-placeholder="" aria-label="Default select example">
+                        <option value="1">Stage</option>
+                      </select>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <p class="text-soft-400 fs-7 fw-medium">Filter by</p>
+                      <div class="d-flex align-items-center gap-2">
+                        <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
+                          id="role" aria-placeholder="" aria-label="Default select example">
+                          <option value="1">Project Stage</option>
+                        </select>
+                        <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
+                          id="role" aria-placeholder="" aria-label="Default select example">
+                          <option value="1">State</option>
+                        </select>
+                        <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
+                          id="role" aria-placeholder="" aria-label="Default select example">
+                          <option value="1">Teammate</option>
+                        </select>
+                      </div>
 
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <p class="text-soft-400 fs-7 fw-medium">View as</p>
+                      <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
+                        id="role" aria-placeholder="" aria-label="Default select example">
+                        <option value="1">Spreadsheet</option>
+                      </select>
+                    </div>
+                    <div class="border-end border-1 border-soft-200"> </div>
+                    <button
+                      class="btn btn-outline-soft-200 fw-normal text-strong-900 fs-7 d-flex align-items-center gap-2">
+                      <span class="icon-printer fs-6"></span> Export
+                    </button>
+
+                  </form>
+                </div>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <div class="p-4 rounded-4 border border-1 border-soft-200">
+                      <div class="d-flex align-items-center justify-content-between mb-3">
+                        <p class="fs-7 fw-medium text-soft-400 ">Project Locations</p>
+                        <h4 class="text-strong-900 fw-medium d-flex align-items-center gap-2">125 <span
+                            class="fs-7 text-soft-400 my-auto">total
+                            locations</span></h4>
+                      </div>
+                      <div class="mapouter" style="position:relative; text-align:right; width:100%; height:450px;">
+                        <div class="gmap_canvas w-100"
+                          style="overflow:hidden; background:none!important; width:100% !important; height:450px;">
+                          <iframe width="100%" class="w-100" height="450px" style="border:0;width: 100% !important;"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps/embed/v1/search?q=canada&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                        </div>
+                        <a href="https://norsumediagroup.com/embed-google-map-website-free" target="_blank"
+                          rel="noopener noreferrer" class="gme-generated-link">Embed Map on Website for Free</a>
+                        <style>
+                          .mapouter {
+                            position: relative;
+                            text-align: right;
+                          }
+
+                          .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                          }
+
+                          .gmap_canvas iframe {
+                            width: 100%;
+                            height: 100%;
+                          }
+
+                          .mapouter a {
+                            display: block;
+                            font-size: 0.85em;
+                            text-align: center;
+                            padding: 5px 0;
+                            color: #6c757d;
+                            text-decoration: none;
+                          }
+
+                          .gme-generated-link {
+                            display: none !important;
+                          }
+                        </style>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="p-4 rounded-4 border border-1 border-soft-200">
+                      <p class="fs-7 fw-medium text-soft-400 mb-3">MW Breakdown by Project Stage</p>
+                      <div id="chart"></div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="p-4 rounded-4 border border-1 border-soft-200">
+                      <p class="fs-7 fw-medium text-soft-400 mb-3">MW Breakdown by COD year</p>
+                      <div id="chart2"></div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="">
-            <div class=" d-flex justify-content-between align-items-center gap-2 mb-4">
-              <h1 class="mb-0 fs-6_5 text-strong-900 fw-medium">Documents</h1>
-              <div class="d-flex align-items-center gap-2">
-
-                <button type="button"
-                  class="btn-sm btn btn-outline-soft-200 text-strong-900 d-flex align-items-center gap-2">
-                  <span class="icon-filter text-sub-500 fs-6 "></span>
-                  Cancel
-                </button>
-                <button type="button"
-                  class="btn-sm btn btn-outline-soft-200 text-strong-900 d-flex align-items-center gap-2">
-                  <span class="icon-sort-ascending text-sub-500 fs-6 "></span>
-                  Sort
-                </button>
-
-              </div>
-
-            </div>
-            <!--end::Container-->
+          </div>
           </div>
           <!--end::App Content-->
     </main>
@@ -600,6 +752,120 @@
       </div>
     </div>
 
+        <!-- Modal -->
+        <div class=" modal fade" id="createProjectModal" tabindex="-1" aria-labelledby="createProjectModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header border-0 p-4">
+              <h1 class="modal-title fs-5 fw-medium text-strong-900" id="exampleModalLabel">Create New Project</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body px-4 py-0">
+              <form action="">
+                <p class="text-strong-900 fw-medium fs-7">Project Details</p>
+                <div class="row g-3 mb-4">
+                  <div class="col-12">
+                    <div class="py-2">
+                      <label for="uploadfile" class="form-label text-sub-500 fw-medium fs-8">Upload
+                        File</label>
+                      <input class="form-control" type="file" id="uploadfile" hidden>
+                      <label for="uploadfile"
+                        class="w-100 d-flex justify-content-center align-items-center gap-3 flex-column py-5 border border-1 border-soft-200 rounded-3">
+                        <span class="icon-upload text-sub-500 fs-3"></span>
+                        <div class="">
+                          <p class="fs-7 fw-medium text-sub-500"><span class="text-primary-500 fw-bold">Click
+                              to
+                              upload</span> or
+                            <span class="fw-bold">drag and drop here</span>
+                          </p>
+                          <p class="fs-7 fw-medium text-sub-500">SVG, PNG, JPG or GIF (max. 1200x800px)</p>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <div class="">
+                      <label for="projectName" class="form-label text-sub-500 fw-medium fs-8">Project Name</label>
+                      <input type="text" class="form-control form-control-lg" id="projectName" placeholder="Project Name"
+                        required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <div class="w-100">
+                      <label for="project" class="form-label text-sub-500 fw-medium fs-8">Type</label>
+                      <select class="form-select form-select-lg w-100" placeholder="Select Type" id="projectType"
+                        aria-placeholder="Select Type" aria-label="Default select example">
+                        <option value="1">Solar</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <div class="">
+                      <label for="projectLocation" class="form-label text-sub-500 fw-medium fs-8">Location</label>
+                      <input type="text" class="form-control form-control-lg" id="projectLocation"
+                        placeholder="Enter Location" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <div class="">
+                      <label for="projectDates" class="form-label text-sub-500 fw-medium fs-8">Dates</label>
+                      <input type="date" class="form-control form-control-lg" id="projectDates" placeholder="Enter Dates"
+                        required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <div class="w-100">
+                      <label for="projectStatus" class="form-label text-sub-500 fw-medium fs-8">Status</label>
+                      <select class="form-select form-select-lg w-100" placeholder="Select Status" id="projectStatus"
+                        aria-placeholder="Select Status" aria-label="Default select example">
+                        <option value="1">Development</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                    <div class="">
+                      <label for="projectSize" class="form-label text-sub-500 fw-medium fs-8">Project Size</label>
+                      <input type="text" class="form-control form-control-lg" id="projectSize" placeholder="Enter Size"
+                        required>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-strong-900 fw-medium fs-7">Project Configuration</p>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <div class="w-100">
+                      <label for="projectManager" class="form-label text-sub-500 fw-medium fs-8">Project Manager</label>
+                      <select class="form-select form-select-lg w-100" placeholder="Select Status" id="projectManager"
+                        aria-placeholder="Select Project Manager" aria-label="Default select example">
+                        <option value="1">Lana Steiner</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check text-sub-500 fw-medium fs-7">
+                      <input class="form-check-input" type="checkbox" value="" id="workflow">
+                      <label class="form-check-label" for="workflow">
+                        Enable workflow and logs
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer border-0 p-4 d-flex align-items-center justify-content-between gap-2">
+              <p class="text-sub-500 fw-medium fs-7">Step <span>1</span> of 3</p>
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="btn btn-medium btn-outline-soft-200 text-strong-900"
+                  data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-medium btn-primary btn-noah-primary">Next</button>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Toast Notification -->
     <div class="toast-container position-fixed top-0 end-0 p-20">
       <div id="liveToast" class="toast w-auto bg-white rounded-3 p-3 border border-1 border-soft-200" role="alert"
@@ -688,7 +954,72 @@
   <!-- jsvectormap -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>    $(document).ready(function () {
+  $('.filter').select2(
+    {
+      theme: 'bootstrap-5',
+      placeholder: $(this).data('placeholder'),
+      // closeOnSelect: false,
+      minimumResultsForSearch: -1
 
+    }
+  );
+  $('#project').select2(
+    {
+      theme: 'bootstrap-5',
+      placeholder: $(this).data('placeholder'),
+      // closeOnSelect: false,
+      minimumResultsForSearch: -1,
+      dropdownAutoWidth: true,
+      width: '100%',
+
+    }
+  );
+  $('#tags').select2(
+    {
+      theme: 'bootstrap-5',
+      placeholder: $(this).data('placeholder'),
+      // closeOnSelect: false,
+      minimumResultsForSearch: -1,
+      dropdownAutoWidth: true,
+      width: '100%',
+
+    }
+  );
+  $('#projectType').select2(
+    {
+      theme: 'bootstrap-5',
+      placeholder: $(this).data('placeholder'),
+      // closeOnSelect: false,
+      minimumResultsForSearch: -1,
+      dropdownAutoWidth: true,
+      width: '100%',
+
+    }
+  );
+  $('#projectStatus').select2(
+    {
+      theme: 'bootstrap-5',
+      placeholder: $(this).data('placeholder'),
+      // closeOnSelect: false,
+      minimumResultsForSearch: -1,
+      dropdownAutoWidth: true,
+      width: '100%',
+
+    }
+  );
+  $('#projectManager').select2(
+    {
+      theme: 'bootstrap-5',
+      placeholder: $(this).data('placeholder'),
+      // closeOnSelect: false,
+      minimumResultsForSearch: -1,
+      dropdownAutoWidth: true,
+      width: '100%',
+
+    }
+  );
+});</script>
 
   <script>
     function showGrid() {
@@ -768,6 +1099,150 @@
     //   })
     // }
   </script>
+    <script>
+      var options = {
+        series: [{
+          name: 'Wind',
+          data: [200, 400, 300, 500],
+          color: '#2457D9'
+        }, {
+          name: 'Solar',
+          data: [100, 200, 400, 300],
+          color: '#A7C6FB'
+        }, {
+          name: 'BESS',
+          data: [800, 600, 700, 900],
+          color: '#E2E8F0'
+        },],
+        chart: {
+          type: 'bar',
+          height: 350,
+          stacked: true,
+          toolbar: {
+            show: false
+          },
+          zoom: {
+            enabled: false
+          },
+  
+        },
+  
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            legend: {
+              position: 'bottom',
+              offsetX: -10,
+              offsetY: 0
+            }
+          }
+        }],
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            borderRadius: 0,
+            borderRadiusApplication: 'end', // 'around', 'end'
+            borderRadiusWhenStacked: 'last', // 'all', 'last'
+            dataLabels: {
+              total: {
+                enabled: false,
+                style: {
+                  fontSize: '13px',
+                  fontWeight: 900
+                }
+              }
+            }
+          },
+        },
+        xaxis: {
+          categories: ['Feasibility', 'NTP', 'Mechanical Completion', 'FinalCompletion'],
+        },
+        legend: {
+          position: 'bottom',
+          offsetY: 0,
+          horizontalAlign: 'center',
+          fontSize: '14px',
+          fontWeight: 500,
+        },
+        fill: {
+          opacity: 1
+        }
+      };
+  
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+      chart.render();
+      var options = {
+        series: [{
+          name: 'Wind',
+          data: [200, 400],
+          color: '#2457D9'
+        }, {
+          name: 'Solar',
+          data: [100, 200],
+          color: '#A7C6FB'
+        }, {
+          name: 'BESS',
+          data: [800, 600],
+          color: '#E2E8F0'
+        },],
+        chart: {
+          type: 'bar',
+          height: 350,
+          stacked: true,
+          toolbar: {
+            show: false
+          },
+          zoom: {
+            enabled: false
+          },
+  
+        },
+  
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            legend: {
+              position: 'bottom',
+              offsetX: -10,
+              offsetY: 0
+            }
+          }
+        }],
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            borderRadius: 0,
+            borderRadiusApplication: 'end', // 'around', 'end'
+            borderRadiusWhenStacked: 'last', // 'all', 'last'
+            dataLabels: {
+              total: {
+                enabled: false,
+                style: {
+                  fontSize: '13px',
+                  fontWeight: 900
+                }
+              }
+            }
+          },
+        },
+        xaxis: {
+          categories: ['2024', '2025'],
+        },
+        legend: {
+          position: 'bottom',
+          offsetY: 0,
+          horizontalAlign: 'center',
+          fontSize: '14px',
+          fontWeight: 500,
+        },
+        fill: {
+          opacity: 1
+        }
+      };
+  
+      var chart = new ApexCharts(document.querySelector("#chart2"), options);
+      chart.render();
+    </script>
   <!--end::Script-->
 </body>
 <!--end::Body-->
