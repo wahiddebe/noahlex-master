@@ -381,37 +381,24 @@
     <!--begin::App Main-->
     <main class="app-main">
       <!--begin::App Content Header-->
-      <div class="app-content-header mb-3">
+      <div class="app-content-header mb-4 border-bottom border-1 border-soft-200-70 py-4">
         <!--begin::Container-->
         <div class="container-fluid">
           <!--begin::Row-->
-          <div
-            class="w-100 rounded-4 p-5 d-flex justify-content-between align-items-center text-white header-dashboard">
+          <div class="gap-12 d-flex align-items-center justify-content-between gap-2">
+            <div class="d-flex align-items-center gap-12">
+              <a href="index.html" class="text-sub-500 icon-arrow-left fs-6_5 text-decoration-none">
+              </a>
+              <p class="text-soft-400 fw-medium fs-6_5">Dashboard</p>
+              <p class="text-soft-400 fw-medium fs-6_5">/</p>
+              <p class="text-soft-400 fw-medium fs-6_5">Alabama BESS</p>
+              <p class="text-soft-400 fw-medium fs-6_5">/</p>
+              <p class="text-strong-900 fw-medium fs-6_5">Smith_Solar_PPA_2024.pdf</p>
+            </div>
             <div class="">
-              <h4 class="mb-2">Welcome back, John!</h4>
-              <p class="text-white-60 fw-medium">You have 5 new notifications</p>
+
             </div>
-            <div class="d-flex gap-12">
-              <a href="#" class="btn btn-noah-dashboard " data-bs-toggle="modal" data-bs-target="#BulkAsign"
-                type="button" role="button">
-                <span class="icon-users-plus fs-5"></span>
-                Bulk Assign
-              </a>
-              <a href="#" data-bs-toggle="modal" data-bs-target="#uploadModal" type="button" role="button"
-                class="btn btn-noah-dashboard ">
-                <span class="icon-upload fs-5"></span>
-                Upload
-              </a>
-              <a href="#" data-bs-toggle="modal" data-bs-target="#createProjectModal" type="button" role="button"
-                class="btn btn-noah-dashboard ">
-                <span class="icon-plus fs-5"></span>
-                Create Project
-              </a>
-              <a href="#" class="btn btn-noah-dashboard ">
-                <span class="icon-clipboard-data fs-5"></span>
-                View Report
-              </a>
-            </div>
+
           </div>
           <!--end::Row-->
         </div>
@@ -422,277 +409,12 @@
       <div class="app-content">
         <!--begin::Container-->
         <div class="container-fluid">
-          <!--begin::Row-->
-          <div class="row g-3 mb-32">
-            <!--begin::Col-->
-            <div class="col-12 col-lg-3">
-              <div class="p-3 border border-1 rounded-3 border-soft-200">
-                <p class="fw-medium fs-7 text-soft-400 mb-2">
-                  Active Projects
-                </p>
-                <h2 class="text-strong-900 mb-2 fw-medium">
-                  18
-                </h2>
-                <p class="text-soft-400 fw-medium fs-7">
-                  <span class="text-strong-900">+8</span> vs last month
-                </p>
-              </div>
-            </div>
-            <div class="col-12 col-lg-3">
-              <div class="p-3 border border-1 rounded-3 border-soft-200">
-                <p class="fw-medium fs-7 text-soft-400 mb-2">
-                  Active Projects
-                </p>
-                <h2 class="text-strong-900 mb-2 fw-medium">
-                  18
-                </h2>
-                <p class="text-soft-400 fw-medium fs-7">
-                  <span class="text-strong-900">+8</span> vs last month
-                </p>
-              </div>
-            </div>
-            <div class="col-12 col-lg-3">
-              <div class="p-3 border border-1 rounded-3 border-soft-200">
-                <p class="fw-medium fs-7 text-soft-400 mb-2">
-                  Active Projects
-                </p>
-                <h2 class="text-strong-900 mb-2 fw-medium">
-                  18
-                </h2>
-                <p class="text-soft-400 fw-medium fs-7">
-                  <span class="text-strong-900">+8</span> vs last month
-                </p>
-              </div>
-            </div>
-            <div class="col-12 col-lg-3">
-              <div class="p-3 border border-1 rounded-3 border-soft-200">
-                <p class="fw-medium fs-7 text-soft-400 mb-2">
-                  Active Projects
-                </p>
-                <h2 class="text-strong-900 mb-2 fw-medium">
-                  18
-                </h2>
-                <p class="text-soft-400 fw-medium fs-7">
-                  <span class="text-strong-900">+8</span> vs last month
-                </p>
-              </div>
-            </div>
-          </div>
-          <!--end::Row-->
-          <div class="dashboard-tab">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link border-top-0 border-end-0 border-start-0 border-bottom active" id="home-tab"
-                  data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home"
-                  aria-selected="true">Project List</button>
-              </li>
 
-              <li class="nav-item" role="presentation">
-                <button class="nav-link border-top-0 border-end-0 border-start-0 border-bottom" id="contact-tab"
-                  data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact"
-                  aria-selected="false">Pipeline</button>
-              </li>
-            </ul>
 
-            <div class="tab-content mt-32" id="myTabContent">
-              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="d-flex justify-content-between align-items-center gap-2 mb-4">
-                  <h1 class="mb-0 fs-6_5 text-strong-900 fw-medium">Project list</h1>
-                  <div class="d-flex align-items-stretch gap-12">
-                    <div class="p-_5 rounded-2 bg-weak-100 d-flex align-items-center">
-                      <span id="project-grid-toggle" class="icon-layout-grid p-_5 rounded-1 fs-6 text-soft-400 bg-white"
-                        onclick="showGrid()"></span>
-                      <span id="project-list-toggle" class="icon-list p-_5 rounded-1 fs-6 text-soft-400 "
-                        onclick="showList()"></span>
-
-                    </div>
-                    <div class="border-end border-1 border-soft-200 "> </div>
-                    <a href="#" class="fs-7 fw-medium text-decoration-none text-primary-500">See more</a>
-
-                  </div>
-                </div>
-                <div class="" id="project-grid">
-                  <div class="row g-3">
-                    <div class="col-lg-4 col-12">
-                      <div class="project-card rounded-3 bg-weak-100 p-2">
-                        <div class="p-2 d-flex justify-content-between align-items-center">
-                          <div class="">
-                            <h1 class="fs-6 mb-2">Bayou Wind SE</h1>
-                            <div class="d-flex align-items-center gap-2">
-                              <span class="text-sub-500 fs-8">Westlake</span>
-                              <span class="bg-sub-500 p-_5 rounded-circle"></span>
-                              <span class="text-sub-500 fs-8">Lousiana</span>
-                            </div>
-                          </div>
-                          <a href="" class="text-decoration-none fs-6 text-strong-900">
-                            <i class="icon-dots-vertical"></i>
-                          </a>
-                        </div>
-                        <div class="">
-                          <img src="../assets/images/project/project.svg" class="w-100 rounded-3" height="254px" alt="">
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center p-2">
-                          <p class="text-soft-400 fw-medium fs-7">Project Size: <span class="text-strong-900">100
-                              MW</span>
-                          </p>
-                          <div class="d-flex align-items-center gap-12">
-                            <span class="text-strong-900 fs-7 fw-medium">25%</span>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="d-none" id="project-list">
-                  <div class="row g-3">
-                    <div class="col-12">
-                      <div class="project-card rounded-3 bg-weak-100 p-2">
-                        <div class="p-2 d-flex justify-content-between align-items-center">
-                          <div class="">
-                            <h1 class="fs-6 mb-2">Bayou Wind SE</h1>
-                            <div class="d-flex align-items-center gap-2">
-                              <span class="text-sub-500 fs-8">Westlake</span>
-                              <span class="bg-sub-500 p-_5 rounded-circle"></span>
-                              <span class="text-sub-500 fs-8">Lousiana</span>
-                            </div>
-                          </div>
-                          <div class="d-flex justify-content-between align-items-center gap-12 p-2">
-                            <p class="text-soft-400 fw-medium fs-7">Project Size: <span class="text-strong-900">100
-                                MW</span>
-                            </p>
-                            <div class="border-end border-1 border-soft-200 align-self-stretch"> </div>
-
-                            <div class="d-flex align-items-center gap-12">
-                              <span class="text-strong-900 fs-7 fw-medium">25%</span>
-                            </div>
-                            <a href="" class="text-decoration-none fs-6 text-strong-900">
-                              <i class="icon-dots-vertical"></i>
-                            </a>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                <div class="d-flex justify-content-between align-items-center gap-2 mb-4">
-                  <h1 class="mb-0 fs-6_5 text-strong-900 fw-medium">Pipeline</h1>
-                  <form class="d-flex justify-content-between align-items-stretch gap-4">
-                    <div class="d-flex align-items-center gap-3">
-                      <p class="text-soft-400 fs-7 fw-medium text-nowrap">Group by</p>
-                      <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
-                        id="role" aria-placeholder="" aria-label="Default select example">
-                        <option value="1">Stage</option>
-                      </select>
-                    </div>
-                    <div class="d-flex align-items-center gap-3">
-                      <p class="text-soft-400 fs-7 fw-medium">Filter by</p>
-                      <div class="d-flex align-items-center gap-2">
-                        <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
-                          id="role" aria-placeholder="" aria-label="Default select example">
-                          <option value="1">Project Stage</option>
-                        </select>
-                        <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
-                          id="role" aria-placeholder="" aria-label="Default select example">
-                          <option value="1">State</option>
-                        </select>
-                        <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
-                          id="role" aria-placeholder="" aria-label="Default select example">
-                          <option value="1">Teammate</option>
-                        </select>
-                      </div>
-
-                    </div>
-                    <div class="d-flex align-items-center gap-3">
-                      <p class="text-soft-400 fs-7 fw-medium">View as</p>
-                      <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
-                        id="role" aria-placeholder="" aria-label="Default select example">
-                        <option value="1">Spreadsheet</option>
-                      </select>
-                    </div>
-                    <div class="border-end border-1 border-soft-200"> </div>
-                    <button
-                      class="btn btn-outline-soft-200 fw-normal text-strong-900 fs-7 d-flex align-items-center gap-2">
-                      <span class="icon-printer fs-6"></span> Export
-                    </button>
-
-                  </form>
-                </div>
-                <div class="row g-3">
-                  <div class="col-12">
-                    <div class="p-4 rounded-4 border border-1 border-soft-200">
-                      <div class="d-flex align-items-center justify-content-between mb-3">
-                        <p class="fs-7 fw-medium text-soft-400 ">Project Locations</p>
-                        <h4 class="text-strong-900 fw-medium d-flex align-items-center gap-2">125 <span
-                            class="fs-7 text-soft-400 my-auto">total
-                            locations</span></h4>
-                      </div>
-                      <div class="mapouter" style="position:relative; text-align:right; width:100%; height:450px;">
-                        <div class="gmap_canvas w-100"
-                          style="overflow:hidden; background:none!important; width:100% !important; height:450px;">
-                          <iframe width="100%" class="w-100" height="450px" style="border:0;width: 100% !important;"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            src="https://www.google.com/maps/embed/v1/search?q=canada&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
-                        </div>
-                        <a href="https://norsumediagroup.com/embed-google-map-website-free" target="_blank"
-                          rel="noopener noreferrer" class="gme-generated-link">Embed Map on Website for Free</a>
-                        <style>
-                          .mapouter {
-                            position: relative;
-                            text-align: right;
-                          }
-
-                          .gmap_canvas {
-                            overflow: hidden;
-                            background: none !important;
-                          }
-
-                          .gmap_canvas iframe {
-                            width: 100%;
-                            height: 100%;
-                          }
-
-                          .mapouter a {
-                            display: block;
-                            font-size: 0.85em;
-                            text-align: center;
-                            padding: 5px 0;
-                            color: #6c757d;
-                            text-decoration: none;
-                          }
-
-                          .gme-generated-link {
-                            display: none !important;
-                          }
-                        </style>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-lg-6">
-                    <div class="p-4 rounded-4 border border-1 border-soft-200">
-                      <p class="fs-7 fw-medium text-soft-400 mb-3">MW Breakdown by Project Stage</p>
-                      <div id="chart"></div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-lg-6">
-                    <div class="p-4 rounded-4 border border-1 border-soft-200">
-                      <p class="fs-7 fw-medium text-soft-400 mb-3">MW Breakdown by COD year</p>
-                      <div id="chart2"></div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
         </div>
-        <!--end::Container-->
       </div>
+
       <!--end::App Content-->
     </main>
     <!--end::App Main-->
