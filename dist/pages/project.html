@@ -509,24 +509,24 @@
                   <form class="d-flex justify-content-between align-items-stretch gap-4">
                     <div class="d-flex align-items-center gap-3">
                       <p class="text-soft-400 fs-7 fw-medium text-nowrap">Group by</p>
-                      <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
-                        id="role" aria-placeholder="" aria-label="Default select example">
+                      <select class="form-select form-select-lg w-100 filter" placeholder="" id="role"
+                        aria-placeholder="" aria-label="Default select example">
                         <option value="1">Stage</option>
                       </select>
                     </div>
                     <div class="d-flex align-items-center gap-3">
                       <p class="text-soft-400 fs-7 fw-medium">Filter by</p>
                       <div class="d-flex align-items-center gap-2">
-                        <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
-                          id="role" aria-placeholder="" aria-label="Default select example">
+                        <select class="form-select form-select-lg w-100 filter-1" placeholder=""
+                          id="project-stage-select" aria-placeholder="" aria-label="Default select example">
                           <option value="1">Project Stage</option>
                         </select>
-                        <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
-                          id="role" aria-placeholder="" aria-label="Default select example">
+                        <select class="form-select form-select-lg w-100 filter-2" placeholder="" id="State-select"
+                          aria-placeholder="" aria-label="Default select example">
                           <option value="1">State</option>
                         </select>
-                        <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
-                          id="role" aria-placeholder="" aria-label="Default select example">
+                        <select class="form-select form-select-lg w-100 filter-3" placeholder="" id="Teammate-select"
+                          aria-placeholder="" aria-label="Default select example">
                           <option value="1">Teammate</option>
                         </select>
                       </div>
@@ -534,8 +534,8 @@
                     </div>
                     <div class="d-flex align-items-center gap-3">
                       <p class="text-soft-400 fs-7 fw-medium">View as</p>
-                      <select style="width: 150px;" class="form-select form-select-lg w-100 filter" placeholder=""
-                        id="role" aria-placeholder="" aria-label="Default select example">
+                      <select class="form-select form-select-lg w-100 filter-4" placeholder="" id="Spreadsheet"
+                        aria-placeholder="" aria-label="Default select example">
                         <option value="1">Spreadsheet</option>
                       </select>
                     </div>
@@ -1067,8 +1067,56 @@
           <!-- jsvectormap -->
           <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
           <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-          <script>    $(document).ready(function () {
+          <script>
+            $(document).ready(function () {
+              $('#AssignType').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1,
+                  dropdownAutoWidth: true,
+                  width: '100%',
+
+                }
+              );
               $('.filter').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1
+
+                }
+              );
+              $('.filter-1').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1
+
+                }
+              );
+              $('.filter-2').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1
+
+                }
+              );
+              $('.filter-3').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1
+
+                }
+              );
+              $('.filter-4').select2(
                 {
                   theme: 'bootstrap-5',
                   placeholder: $(this).data('placeholder'),
@@ -1132,7 +1180,20 @@
 
                 }
               );
-            });</script>
+              $('#bulktype').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1,
+                  dropdownAutoWidth: true,
+                  width: '100%',
+
+                }
+              );
+            });
+
+          </script>
 
           <script>
 

@@ -266,3 +266,14 @@ p{
   .toast{
     min-width: 500px;
   }
+
+  table.dataTable > thead > tr > th, table.dataTable > thead > tr > td  {
+    border-bottom: none;
+}
+ 
+div.dt-container.dt-empty-footer .dt-scroll-body {
+  border-bottom: none;
+}
+.min-vh-50 {
+    min-height: 50vh;
+}
