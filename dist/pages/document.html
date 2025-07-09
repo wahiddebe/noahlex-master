@@ -123,34 +123,34 @@
           <!--begin::Sidebar Menu-->
           <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
             <!-- <li class="nav-item menu-open">
-              <a href="#" class="nav-link active">
-                <i class="nav-icon bi bi-speedometer"></i>
-                <p>
-                  Dashboard
-                  <i class="nav-arrow bi bi-chevron-right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="./index.html" class="nav-link active">
-                    <i class="nav-icon icon-layout-rows"></i>
-                    <p>Dashboard v1</p>
+                  <a href="#" class="nav-link active">
+                    <i class="nav-icon bi bi-speedometer"></i>
+                    <p>
+                      Dashboard
+                      <i class="nav-arrow bi bi-chevron-right"></i>
+                    </p>
                   </a>
-                </li>
-                <li class="nav-item">
-                  <a href="./index2.html" class="nav-link">
-                    <i class="nav-icon bi bi-circle"></i>
-                    <p>Dashboard v2</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="./index3.html" class="nav-link">
-                    <i class="nav-icon bi bi-circle"></i>
-                    <p>Dashboard v3</p>
-                  </a>
-                </li>
-              </ul>
-            </li> -->
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="./index.html" class="nav-link active">
+                        <i class="nav-icon icon-layout-rows"></i>
+                        <p>Dashboard v1</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./index2.html" class="nav-link">
+                        <i class="nav-icon bi bi-circle"></i>
+                        <p>Dashboard v2</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./index3.html" class="nav-link">
+                        <i class="nav-icon bi bi-circle"></i>
+                        <p>Dashboard v3</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li> -->
 
             <li class="nav-item">
               <a href="index.html" class="nav-link active">
@@ -159,133 +159,16 @@
               </a>
             </li>
             <!-- <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon icon-bell fs-5"></i>
-                <p class="fs-7 ">Notifications</p>
-              </a>
-            </li> -->
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon icon-bell fs-5"></i>
+                    <p class="fs-7 ">Notifications</p>
+                  </a>
+                </li> -->
             <li class="nav-item dropdown dropend">
-              <a class="nav-link" data-bs-toggle="dropdown" href="#" data-bs-auto-close="outside" aria-expanded="false">
+              <a class="nav-link" type="button" href="#" onclick="notif()">
                 <i class="nav-icon icon-bell fs-5"></i>
                 <p class="fs-7 ">Notifications</p>
               </a>
-              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end border border-1 border-soft-200"
-                style="z-index: 99;min-width: 451px;">
-                <span
-                  class="dropdown-item dropdown-header text-start py-3 px-4 fw-bold text-strong-900 fs-6_5 border-bottom border-1 border-soft-200">Notifications
-                  &
-                  Alerts</span>
-                <!-- <a href="#" class="dropdown-item">
-                  <i class="bi bi-envelope me-2"></i> 4 new messages
-                  <span class="float-end text-secondary fs-7">3 mins</span>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <i class="bi bi-people-fill me-2"></i> 8 friend requests
-                  <span class="float-end text-secondary fs-7">12 hours</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                  <i class="bi bi-file-earmark-fill me-2"></i> 3 new reports
-                  <span class="float-end text-secondary fs-7">2 days</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item dropdown-footer"> See All Notifications </a> -->
-
-                <div class="">
-                  <div class="border-bottom border-1 border-soft-200 d-flex align-items-center">
-                    <button onclick="showReal()" class="btn btn-link btn-notif active text-decoration-none p-3"
-                      id="real-time-btn">Real-Time
-                      Alerts</button>
-                    <button onclick="showScheduled()" class="btn btn-link btn-notif text-decoration-none p-3"
-                      id="scheduled-reminders-btn">Scheduled Reminders</button>
-                  </div>
-                  <div class="d-flex flex-column align-items-stretch p-3 gap-2" id="real-time">
-                    <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
-                      <span
-                        class="p-2 border border-1 icon-file-upload border-black-08 text-primary-500 bg-primary-50 rounded-2"></span>
-                      <div class="">
-                        <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
-                        <p class="text-soft-400 fs-7 fw-medium mb-2"><span
-                            class="text-strong-900">Permit_SiteB.pdf</span> added to Permits Folder by <span
-                            class="text-strong-900">John</span>
-                          Doe
-                        </p>
-                        <p class="fs-8 fw-medium text-soft-400">2 mins ago</p>
-                      </div>
-                    </a>
-                    <div class="border-bottom border-_5 border-soft-200"></div>
-                    <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
-                      <span
-                        class="p-2 border border-1 icon-file-upload border-black-08 text-success-700 bg-success-50 rounded-2"></span>
-                      <div class="">
-                        <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
-                        <p class="text-soft-400 fs-7 fw-medium mb-2"><span
-                            class="text-strong-900">Permit_SiteB.pdf</span> added to Permits Folder by <span
-                            class="text-strong-900">John</span>
-                          Doe
-                        </p>
-                        <p class="fs-8 fw-medium text-soft-400">2 mins ago</p>
-                      </div>
-                    </a>
-                    <div class="border-bottom border-_5 border-soft-200"></div>
-                    <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
-                      <span
-                        class="p-2 border border-1 icon-file-upload border-black-08 text-warning-700 bg-warning-50 rounded-2"></span>
-                      <div class="">
-                        <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
-                        <p class="text-soft-400 fs-7 fw-medium mb-2"><span
-                            class="text-strong-900">Permit_SiteB.pdf</span> added to Permits Folder by <span
-                            class="text-strong-900">John</span>
-                          Doe
-                        </p>
-                        <p class="fs-8 fw-medium text-soft-400">2 mins ago</p>
-                      </div>
-                    </a>
-                    <div class="border-bottom border-_5 border-soft-200"></div>
-                    <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
-                      <span
-                        class="p-2 border border-1 icon-file-upload border-black-08 text-error-600 bg-error-50 rounded-2"></span>
-                      <div class="">
-                        <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
-                        <p class="text-soft-400 fs-7 fw-medium mb-2"><span
-                            class="text-strong-900">Permit_SiteB.pdf</span> added to Permits Folder by <span
-                            class="text-strong-900">John</span>
-                          Doe
-                        </p>
-                        <p class="fs-8 fw-medium text-soft-400">2 mins ago</p>
-                      </div>
-                    </a>
-                  </div>
-
-                  <div class="d-none flex-column align-items-stretch p-3 gap-2" id="scheduled-reminders">
-                    <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
-                      <span class="p-2 border border-1 icon-file-upload border-black-08 text-info-600 rounded-2"></span>
-                      <div class="">
-                        <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
-                        <p class="fs-8 fw-medium text-soft-400">May 30, 10:00 AM</p>
-                      </div>
-                    </a>
-                    <div class="border-bottom border-_5 border-soft-200"></div>
-                    <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
-                      <span
-                        class="p-2 border border-1 icon-file-upload border-black-08 text-error-600 rounded-2"></span>
-                      <div class="">
-                        <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
-                        <p class="fs-8 fw-medium text-soft-400">May 30, 10:00 AM</p>
-                      </div>
-                    </a>
-                    <div class="border-bottom border-_5 border-soft-200"></div>
-                    <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
-                      <span
-                        class="p-2 border border-1 icon-file-upload border-black-08 text-warning-600 rounded-2"></span>
-                      <div class="">
-                        <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
-                        <p class="fs-8 fw-medium text-soft-400">May 30, 10:00 AM</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
             </li>
             <li class="nav-item">
               <a href="project.html" class="nav-link">
@@ -380,6 +263,124 @@
     <!--end::Sidebar-->
     <!--begin::App Main-->
     <main class="app-main">
+      <div class="positon-fixed  d-none" id="notif-wrapper">
+        <div
+          class="m-3 dropdown-menu d-block position-fixed dropdown-menu-lg dropdown-menu-end border border-1 border-soft-200"
+          style="z-index: 99;min-width: 451px;">
+          <span
+            class="dropdown-item dropdown-header text-start py-3 px-4 fw-bold text-strong-900 fs-6_5 border-bottom border-1 border-soft-200">Notifications
+            &
+            Alerts</span>
+          <!-- <a href="#" class="dropdown-item">
+                        <i class="bi bi-envelope me-2"></i> 4 new messages
+                        <span class="float-end text-secondary fs-7">3 mins</span>
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        <i class="bi bi-people-fill me-2"></i> 8 friend requests
+                        <span class="float-end text-secondary fs-7">12 hours</span>
+                      </a>
+                      <div class="dropdown-divider"></div>
+                      <a href="#" class="dropdown-item">
+                        <i class="bi bi-file-earmark-fill me-2"></i> 3 new reports
+                        <span class="float-end text-secondary fs-7">2 days</span>
+                      </a>
+                      <div class="dropdown-divider"></div>
+                      <a href="#" class="dropdown-item dropdown-footer"> See All Notifications </a> -->
+
+          <div class="">
+            <div class="border-bottom border-1 border-soft-200 d-flex align-items-center">
+              <button onclick="showReal()" class="btn btn-link btn-notif active text-decoration-none p-3"
+                id="real-time-btn">Real-Time
+                Alerts</button>
+              <button onclick="showScheduled()" class="btn btn-link btn-notif text-decoration-none p-3"
+                id="scheduled-reminders-btn">Scheduled Reminders</button>
+            </div>
+            <div class="d-flex flex-column align-items-stretch p-3 gap-2" id="real-time">
+              <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
+                <span
+                  class="p-2 border border-1 icon-file-upload border-black-08 text-primary-500 bg-primary-50 rounded-2"></span>
+                <div class="">
+                  <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
+                  <p class="text-soft-400 fs-7 fw-medium mb-2"><span class="text-strong-900">Permit_SiteB.pdf</span>
+                    added to
+                    Permits Folder by <span class="text-strong-900">John</span>
+                    Doe
+                  </p>
+                  <p class="fs-8 fw-medium text-soft-400">2 mins ago</p>
+                </div>
+              </a>
+              <div class="border-bottom border-_5 border-soft-200"></div>
+              <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
+                <span
+                  class="p-2 border border-1 icon-file-upload border-black-08 text-success-700 bg-success-50 rounded-2"></span>
+                <div class="">
+                  <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
+                  <p class="text-soft-400 fs-7 fw-medium mb-2"><span class="text-strong-900">Permit_SiteB.pdf</span>
+                    added to
+                    Permits Folder by <span class="text-strong-900">John</span>
+                    Doe
+                  </p>
+                  <p class="fs-8 fw-medium text-soft-400">2 mins ago</p>
+                </div>
+              </a>
+              <div class="border-bottom border-_5 border-soft-200"></div>
+              <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
+                <span
+                  class="p-2 border border-1 icon-file-upload border-black-08 text-warning-700 bg-warning-50 rounded-2"></span>
+                <div class="">
+                  <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
+                  <p class="text-soft-400 fs-7 fw-medium mb-2"><span class="text-strong-900">Permit_SiteB.pdf</span>
+                    added to
+                    Permits Folder by <span class="text-strong-900">John</span>
+                    Doe
+                  </p>
+                  <p class="fs-8 fw-medium text-soft-400">2 mins ago</p>
+                </div>
+              </a>
+              <div class="border-bottom border-_5 border-soft-200"></div>
+              <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
+                <span
+                  class="p-2 border border-1 icon-file-upload border-black-08 text-error-600 bg-error-50 rounded-2"></span>
+                <div class="">
+                  <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
+                  <p class="text-soft-400 fs-7 fw-medium mb-2"><span class="text-strong-900">Permit_SiteB.pdf</span>
+                    added to
+                    Permits Folder by <span class="text-strong-900">John</span>
+                    Doe
+                  </p>
+                  <p class="fs-8 fw-medium text-soft-400">2 mins ago</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="d-none flex-column align-items-stretch p-3 gap-2" id="scheduled-reminders">
+              <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
+                <span class="p-2 border border-1 icon-file-upload border-black-08 text-info-600 rounded-2"></span>
+                <div class="">
+                  <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
+                  <p class="fs-8 fw-medium text-soft-400">May 30, 10:00 AM</p>
+                </div>
+              </a>
+              <div class="border-bottom border-_5 border-soft-200"></div>
+              <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
+                <span class="p-2 border border-1 icon-file-upload border-black-08 text-error-600 rounded-2"></span>
+                <div class="">
+                  <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
+                  <p class="fs-8 fw-medium text-soft-400">May 30, 10:00 AM</p>
+                </div>
+              </a>
+              <div class="border-bottom border-_5 border-soft-200"></div>
+              <a href="#" class="p-2 d-flex gap-3 text-decoration-none align-items-start">
+                <span class="p-2 border border-1 icon-file-upload border-black-08 text-warning-600 rounded-2"></span>
+                <div class="">
+                  <h1 class="fs-6 fw-bold text-strong-900 mb-2">New Document Uploaded</h1>
+                  <p class="fs-8 fw-medium text-soft-400">May 30, 10:00 AM</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <!--begin::App Content Header-->
       <div class="app-content-header mb-4 border-bottom border-1 border-soft-200-70 py-4">
         <!--begin::Container-->
@@ -997,6 +998,21 @@
       $('#scheduled-reminders').addClass('d-flex')
       $('#real-time').addClass('d-none')
       $('#real-time').removeClass('d-flex')
+    }
+  </script>
+  <script>
+    function notif() {
+      var notifWrap = $('#notif-wrapper');
+      if (notifWrap.hasClass('d-block')) {
+        notifWrap.removeClass('d-block');
+        notifWrap.addClass('d-none');
+      } else {
+        notifWrap.removeClass('d-none');
+        notifWrap.toggleClass('d-block');
+      }
+
+
+
     }
   </script>
   <!--end::Script-->
