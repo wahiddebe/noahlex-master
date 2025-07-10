@@ -277,3 +277,13 @@ div.dt-container.dt-empty-footer .dt-scroll-body {
 .min-vh-50 {
     min-height: 50vh;
 }
+
+
+.accordion-button:not(.collapsed) {
+  color: #0A0D14;
+  background-color: white;
+  box-shadow: none;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
