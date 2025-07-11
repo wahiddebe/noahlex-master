@@ -287,3 +287,7 @@ div.dt-container.dt-empty-footer .dt-scroll-body {
 .accordion-button:focus {
   box-shadow: none;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}

@@ -393,12 +393,12 @@
                 </div>
             </div>
             <!--begin::App Content Header-->
-            <div class="app-content-header mb-4 border-bottom border-1 border-soft-200-70 py-4">
+            <div class="app-content-header border-bottom border-1 border-soft-200-70 py-4">
                 <!--begin::Container-->
                 <div class="container-fluid">
                     <!--begin::Row-->
                     <div class="gap-12 d-flex align-items-center">
-                        <h4 class="text-strong-900 fw-medium">Help Center</h4>
+                        <h4 class="text-strong-900 fw-medium">Settings</h4>
                     </div>
                     <!--end::Row-->
                 </div>
@@ -409,125 +409,118 @@
             <div class="app-content">
                 <!--begin::Container-->
                 <div class="container-fluid">
-                    <div class="mb-5 d-flex flex-column align-items-center text-center gap-4">
-                        <h2 class="text-strong-900 fw-medium">How we can help you?</h2>
-                        <div class="col-12 col-lg-6">
-                            <div class="input-group input-group-lg col-12 col-lg-6">
-                                <span class="input-group-text bg-white border-end-0 pe-0" id="inputGroup-sizing-lg"><i
-                                        class="icon-search text-sub-500 fs-5"></i>
-                                </span>
-                                <input type="text" class="form-control border-start-0 ps-2"
-                                    aria-label="Sizing example input" name="search" placeholder="Search"
-                                    aria-describedby="inputGroup-sizing-lg">
+                    <div class="d-flex align-items-stretch flex-column flex-lg-row min-vh-100">
+                        <div class="col-12 col-lg-3 pe-3 py-3 border-end border-1 border-soft-200 d-none d-lg-block">
+                            <div class="mb-4">
+                                <h6 class="fs-7 fw-medium text-soft-400 mb-12 text-uppercase">Personal</h6>
+                                <div class="d-flex flex-column gap-2">
+                                    <a href="setting.html"
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 bg-weak-100 rounded-3 fw-medium fs-6_5">
+                                        <span class="icon-user-circle text-strong-900 fs-5"></span>Account
+                                    </a>
+                                    <a href="#"
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        <span class="icon-lock text-strong-900 fs-5"></span>Security
+                                    </a>
+                                    <a href="setting_notification.html"
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        <span class="icon-bell text-strong-900 fs-5"></span>Notifications
+                                    </a>
+                                    <a href="setting_language.html"
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        <span class="icon-world text-strong-900 fs-5"></span>Language
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <h6 class="fs-7 fw-medium text-soft-400 mb-12 text-uppercase">organizations</h6>
+                                <div class="d-flex flex-column gap-2">
+                                    <a href="#"
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2  rounded-3 fw-medium fs-6_5">
+                                        <span class="icon-users text-strong-900 fs-5"></span>Users
+                                    </a>
+                                    <a href="#"
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        <span class="icon-search text-strong-900 fs-5"></span>Roles
+                                    </a>
+                                    <a href="#"
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        <span class="icon-credit-card text-strong-900 fs-5"></span>Billing
+                                    </a>
+                                    <a href="#"
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        <span class="icon-box text-strong-900 fs-5"></span>API
+                                    </a>
+                                    <a href="#"
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        <span class="icon-apps text-strong-900 fs-5"></span>Integrations
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="mb-5">
-                        <div class="row g-4">
-                            <div class="col-12 col-lg-3">
-                                <a href="help_detail.html" class="text-decoration-none">
-                                    <div class="rounded-4 p-4 border border-1 border-soft-200">
-                                        <i class="icon-rocket text-primary-500 fs-5"></i>
-                                        <div class="mt-5">
-                                            <h6 class="fs-6_5 fw-medium text-strong-900 mb-12 text-truncate">Get
-                                                Started</h6>
-                                            <p class="fs-7 text-sub-500">8 articles</p>
+                        <div class="col-12 col-lg-9 ps-3 py-3">
+                            <h4 class="text-strong-900 fw-medium mb-3">Account</h4>
+                            <form action="">
+                                <div class="row g-4 mb-4">
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center gap-4">
+                                            <img width="80" height="80"
+                                                src="https://wahiddebe.github.io/iconmoon-master/images/user-empty.svg"
+                                                alt="" class="rounded-circle">
+                                            <label for="profilePicture"
+                                                class="cursor-pointer px-3 border border-1 border-soft-200 rounded-2 fs-8 d-flex align-items-center gap-2">
+                                                <span class="icon-upload text-strong-900 fs-6"></span>
+                                                Upload
+                                                Photo</label>
+                                            <input type="file" class="form-control" id="profilePicture" hidden
+                                                accept="image/*">
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-lg-3">
-                                <a href="help_detail.html" class="text-decoration-none">
-                                    <div class="rounded-4 p-4 border border-1 border-soft-200">
-                                        <i class="icon-rocket text-primary-500 fs-5"></i>
-                                        <div class="mt-5">
-                                            <h6 class="fs-6_5 fw-medium text-strong-900 mb-12 text-truncate">Creating
-                                                Documents, Templates, etc.</h6>
-                                            <p class="fs-7 text-sub-500">8 articles</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-lg-3">
-                                <a href="help_detail.html" class="text-decoration-none">
-                                    <div class="rounded-4 p-4 border border-1 border-soft-200">
-                                        <i class="icon-rocket text-primary-500 fs-5"></i>
-                                        <div class="mt-5">
-                                            <h6 class="fs-6_5 fw-medium text-strong-900 mb-12 text-truncate">Sending
-                                                Documents</h6>
-                                            <p class="fs-7 text-sub-500">8 articles</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-lg-3">
-                                <a href="help_detail.html" class="text-decoration-none">
-                                    <div class="rounded-4 p-4 border border-1 border-soft-200">
-                                        <i class="icon-rocket text-primary-500 fs-5"></i>
-                                        <div class="mt-5">
-                                            <h6 class="fs-6_5 fw-medium text-strong-900 mb-12 text-truncate">Tracking &
-                                                Managing Document</h6>
-                                            <p class="fs-7 text-sub-500">8 articles</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-lg-3">
-                                <a href="help_detail.html" class="text-decoration-none">
-                                    <div class="rounded-4 p-4 border border-1 border-soft-200">
-                                        <i class="icon-rocket text-primary-500 fs-5"></i>
-                                        <div class="mt-5">
-                                            <h6 class="fs-6_5 fw-medium text-strong-900 mb-12 text-truncate">
-                                                Integrations </h6>
-                                            <p class="fs-7 text-sub-500">8 articles</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-lg-3">
-                                <a href="help_detail.html" class="text-decoration-none">
-                                    <div class="rounded-4 p-4 border border-1 border-soft-200">
-                                        <i class="icon-rocket text-primary-500 fs-5"></i>
-                                        <div class="mt-5">
-                                            <h6 class="fs-6_5 fw-medium text-strong-900 mb-12 text-truncate">Automations
-                                            </h6>
-                                            <p class="fs-7 text-sub-500">8 articles</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-lg-3">
-                                <a href="help_detail.html" class="text-decoration-none">
-                                    <div class="rounded-4 p-4 border border-1 border-soft-200">
-                                        <i class="icon-rocket text-primary-500 fs-5"></i>
-                                        <div class="mt-5">
-                                            <h6 class="fs-6_5 fw-medium text-strong-900 mb-12 text-truncate">Admin Hub
-                                            </h6>
-                                            <p class="fs-7 text-sub-500">8 articles</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-lg-3">
-                                <a href="help_detail.html" class="text-decoration-none">
-                                    <div class="rounded-4 p-4 border border-1 border-soft-200">
-                                        <i class="icon-rocket text-primary-500 fs-5"></i>
-                                        <div class="mt-5">
-                                            <h6 class="fs-6_5 fw-medium text-strong-900 mb-12 text-truncate">
-                                                Troubleshooting</h6>
-                                            <p class="fs-7 text-sub-500">8 articles</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <h6 class="fs-6_5 fw-medium text-strong-900 mb-3 text-truncate">
-                            Still searching your answer?</h6>
-                        <a href="contact.html" type="button" class="btn btn-medium btn-primary btn-noah-primary">Contact
-                            us!</a>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="">
+                                            <label for="fullName" class="form-label text-sub-500 fw-medium fs-8">Full
+                                                Name</label>
 
+                                            <input type="text" class="form-control form-control-lg" id="fullName"
+                                                placeholder="Full Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="">
+                                            <label for="emailAddress"
+                                                class="form-label text-sub-500 fw-medium fs-8">Email Address</label>
+
+                                            <input type="email" class="form-control form-control-lg" id="emailAddress"
+                                                placeholder="Email Address" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="">
+                                            <label for="companyName"
+                                                class="form-label text-sub-500 fw-medium fs-8">Company Name</label>
+
+                                            <input type="text" class="form-control form-control-lg" id="companyName"
+                                                placeholder="Company Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="">
+                                            <label for="roleAccount"
+                                                class="form-label text-sub-500 fw-medium fs-8">Role</label>
+
+                                            <input type="text" class="form-control form-control-lg" id="roleAccount"
+                                                placeholder="Role" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 justify-content-end">
+                                    <button type="button" class="btn btn-medium btn-outline-soft-200 text-strong-900"
+                                        data-bs-dismiss="modal">Discard</button>
+                                    <button type="button" class="btn btn-medium btn-primary btn-noah-primary">Update
+                                        Profile</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
