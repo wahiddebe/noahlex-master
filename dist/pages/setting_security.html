@@ -467,69 +467,33 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-9 ps-3 py-3">
-                            <h4 class="text-strong-900 fw-medium mb-3">Account</h4>
-                            <form action="">
-                                <div class="row g-4 mb-4">
-                                    <div class="col-12">
-                                        <div class="d-flex align-items-center gap-4">
-                                            <img width="80" height="80"
-                                                src="https://wahiddebe.github.io/iconmoon-master/images/user-empty.svg"
-                                                alt="" class="rounded-circle">
-                                            <label for="profilePicture"
-                                                class="cursor-pointer px-3 py-2 border border-1 border-soft-200 rounded-2 fs-8 d-flex align-items-center gap-2">
-                                                <span class="icon-upload text-strong-900 fs-6"></span>
-                                                Upload
-                                                Photo</label>
-                                            <input type="file" class="form-control" id="profilePicture" hidden
-                                                accept="image/*">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-12">
-                                        <div class="">
-                                            <label for="fullName" class="form-label text-sub-500 fw-medium fs-8">Full
-                                                Name</label>
-
-                                            <input type="text" class="form-control form-control-lg" id="fullName"
-                                                placeholder="Full Name" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-12">
-                                        <div class="">
-                                            <label for="emailAddress"
-                                                class="form-label text-sub-500 fw-medium fs-8">Email Address</label>
-
-                                            <input type="email" class="form-control form-control-lg" id="emailAddress"
-                                                placeholder="Email Address" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-12">
-                                        <div class="">
-                                            <label for="companyName"
-                                                class="form-label text-sub-500 fw-medium fs-8">Company Name</label>
-
-                                            <input type="text" class="form-control form-control-lg" id="companyName"
-                                                placeholder="Company Name" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-12">
-                                        <div class="">
-                                            <label for="roleAccount"
-                                                class="form-label text-sub-500 fw-medium fs-8">Role</label>
-
-                                            <input type="text" class="form-control form-control-lg" id="roleAccount"
-                                                placeholder="Role" required>
-                                        </div>
-                                    </div>
+                            <h4 class="text-strong-900 fw-medium mb-4">Security</h4>
+                            <div
+                                class="rounded-3 p-4 border border-1 border-soft-200 d-flex gap-3 align-items-center justify-content-between mb-4">
+                                <div class="">
+                                    <h6 class="fs-6_5 text-strong-900 fw-medium mb-2">Password</h6>
+                                    <p class="text-soft-400 fw-medium fs-7">Set a unique password to protect your
+                                        personal account.</p>
                                 </div>
-                                <div class="d-flex align-items-center gap-2 justify-content-end">
-                                    <button type="button" class="btn btn-medium btn-outline-soft-200 text-strong-900"
-                                        data-bs-dismiss="modal">Discard</button>
-                                    <button type="button" class="btn btn-medium btn-primary btn-noah-primary">Update
-                                        Profile</button>
-
-
+                                <button type="button" class="btn btn-medium btn-outline-soft-200 text-strong-900">Change
+                                    password</button>
+                            </div>
+                            <div
+                                class="rounded-3 p-4 border border-1 border-soft-200 d-flex gap-3 align-items-center justify-content-between mb-4">
+                                <div class="">
+                                    <h6 class="fs-6_5 text-strong-900 fw-medium mb-2">Two-factor authentication (2FA)
+                                    </h6>
+                                    <p class="text-soft-400 fw-medium fs-7">Two factor authentication adds extra account
+                                        security by requiring a unique access code, in addition to your email and
+                                        password.</p>
                                 </div>
-                            </form>
+                                <form action="">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="switchCheckChecked" checked>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -565,13 +529,19 @@
                                             aria-label="Default select example">
                                             <option value="1">Project Manager</option>
                                             <option value="2">Document Controller</option>
-                                            <option value="3">Construction Manager / Site Lead</option>
-                                            <option value="4">Engineer (Civil / Electrical / Strcutural)</option>
+                                            <option value="3">Construction Manager / Site
+                                                Lead</option>
+                                            <option value="4">Engineer (Civil / Electrical /
+                                                Strcutural)</option>
                                             <option value="5">EPC Representative</option>
-                                            <option value="6">Developer / Owner Representative</option>
-                                            <option value="6">Vendor / Subcontractor</option>
-                                            <option value="6">Quality or Commissioning Engineer</option>
-                                            <option value="6">O*M Team Member (Post-COD)</option>
+                                            <option value="6">Developer / Owner
+                                                Representative</option>
+                                            <option value="6">Vendor / Subcontractor
+                                            </option>
+                                            <option value="6">Quality or Commissioning
+                                                Engineer</option>
+                                            <option value="6">O*M Team Member (Post-COD)
+                                            </option>
                                             <option value="6">Viewer</option>
                                         </select>
                                     </div>
@@ -585,13 +555,19 @@
                                             multiple>
                                             <option value="1">Project Manager</option>
                                             <option value="2">Document Controller</option>
-                                            <option value="3">Construction Manager / Site Lead</option>
-                                            <option value="4">Engineer (Civil / Electrical / Strcutural)</option>
+                                            <option value="3">Construction Manager / Site
+                                                Lead</option>
+                                            <option value="4">Engineer (Civil / Electrical /
+                                                Strcutural)</option>
                                             <option value="5">EPC Representative</option>
-                                            <option value="6">Developer / Owner Representative</option>
-                                            <option value="6">Vendor / Subcontractor</option>
-                                            <option value="6">Quality or Commissioning Engineer</option>
-                                            <option value="6">O*M Team Member (Post-COD)</option>
+                                            <option value="6">Developer / Owner
+                                                Representative</option>
+                                            <option value="6">Vendor / Subcontractor
+                                            </option>
+                                            <option value="6">Quality or Commissioning
+                                                Engineer</option>
+                                            <option value="6">O*M Team Member (Post-COD)
+                                            </option>
                                             <option value="6">Viewer</option>
                                         </select>
                                     </div>
@@ -626,9 +602,11 @@
                                                         class="text-primary-500 fw-bold">Click
                                                         to
                                                         upload</span> or
-                                                    <span class="fw-bold">drag and drop here</span>
+                                                    <span class="fw-bold">drag and drop
+                                                        here</span>
                                                 </p>
-                                                <p class="fs-7 fw-medium text-sub-500">SVG, PNG, JPG or GIF (max.
+                                                <p class="fs-7 fw-medium text-sub-500">SVG,
+                                                    PNG, JPG or GIF (max.
                                                     1200x800px)</p>
                                             </div>
                                         </label>
@@ -676,9 +654,11 @@
                                                         class="text-primary-500 fw-bold">Click
                                                         to
                                                         upload</span> or
-                                                    <span class="fw-bold">drag and drop here</span>
+                                                    <span class="fw-bold">drag and drop
+                                                        here</span>
                                                 </p>
-                                                <p class="fs-7 fw-medium text-sub-500">SVG, PNG, JPG or GIF (max.
+                                                <p class="fs-7 fw-medium text-sub-500">SVG,
+                                                    PNG, JPG or GIF (max.
                                                     1200x800px)</p>
                                             </div>
                                         </label>
@@ -738,12 +718,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-strong-900 fw-medium fs-7">Project Configuration</p>
+                            <p class="text-strong-900 fw-medium fs-7">Project Configuration
+                            </p>
                             <div class="row g-3">
                                 <div class="col-12">
                                     <div class="w-100">
                                         <label for="projectManager"
-                                            class="form-label text-sub-500 fw-medium fs-8">Project Manager</label>
+                                            class="form-label text-sub-500 fw-medium fs-8">Project
+                                            Manager</label>
                                         <select class="form-select form-select-lg w-100" placeholder="Select Status"
                                             id="projectManager" aria-placeholder="Select Project Manager"
                                             aria-label="Default select example">
@@ -982,6 +964,9 @@
 
 
         }
+    </script>
+    <script>
+        document.getElementById("checkIndeterminate").indeterminate = true;
     </script>
     <!--end::Script-->
 </body>
