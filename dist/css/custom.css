@@ -291,3 +291,11 @@ div.dt-container.dt-empty-footer .dt-scroll-body {
 .cursor-pointer {
     cursor: pointer;
 }
+
+.border-warning-400{
+    border-color: #FBBF24 !important;
+}
+
+.text-warning-900{
+  color: #78350F !important;
+}

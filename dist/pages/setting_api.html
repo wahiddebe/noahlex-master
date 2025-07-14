@@ -423,11 +423,11 @@
                                 <h6 class="fs-7 fw-medium text-soft-400 mb-12 text-uppercase">Personal</h6>
                                 <div class="d-flex flex-column gap-2">
                                     <a href="setting.html"
-                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2  rounded-3 fw-medium fs-6_5">
                                         <span class="icon-user-circle text-strong-900 fs-5"></span>Account
                                     </a>
                                     <a href="setting_security.html"
-                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5 bg-weak-100">
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
                                         <span class="icon-lock text-strong-900 fs-5"></span>Security
                                     </a>
                                     <a href="setting_notification.html"
@@ -456,7 +456,7 @@
                                         <span class="icon-credit-card text-strong-900 fs-5"></span>Billing
                                     </a>
                                     <a href="setting_api.html"
-                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5 bg-weak-100">
                                         <span class="icon-box text-strong-900 fs-5"></span>API
                                     </a>
                                     <a href="setting_integration.html"
@@ -467,38 +467,141 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-9 ps-3 py-3">
-                            <h4 class="text-strong-900 fw-medium mb-4">Security</h4>
-                            <div
-                                class="rounded-3 p-4 border border-1 border-soft-200 d-flex gap-3 align-items-center justify-content-between mb-4">
-                                <div class="">
-                                    <h6 class="fs-6_5 text-strong-900 fw-medium mb-2">Password</h6>
-                                    <p class="text-soft-400 fw-medium fs-7">Set a unique password to protect your
-                                        personal account.</p>
-                                </div>
-                                <button type="button" class="btn btn-medium btn-outline-soft-200 text-strong-900">Change
-                                    password</button>
-                            </div>
-                            <div
-                                class="rounded-3 p-4 border border-1 border-soft-200 d-flex gap-3 align-items-center justify-content-between mb-4">
-                                <div class="">
-                                    <h6 class="fs-6_5 text-strong-900 fw-medium mb-2">Two-factor authentication (2FA)
-                                    </h6>
-                                    <p class="text-soft-400 fw-medium fs-7">Two factor authentication adds extra account
-                                        security by requiring a unique access code, in addition to your email and
-                                        password.</p>
-                                </div>
-                                <form action="">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="switchCheckChecked" checked>
+                            <h4 class="text-strong-900 fw-medium mb-4">API Keys & Webhooks</h4>
+                            <div action="" class="rounded-3 p-4 border border-1 border-soft-200 mb-4">
+                                <h6 class="fs-6 text-strong-900 fw-medium mb-2">Live mode</h6>
+                                <p class="text-sub-500 fs-7">Generate production-level credential for integration with
+                                    live services and data.</p>
+                                <div class="mb-4 mt-2 row g-4">
+                                    <div class="col-lg-6 col-12">
+                                        <label for="" class="fs-7 text-strong-900 fw-medium mb-1">
+                                            Private Key
+                                        </label>
+                                        <div id="privateKeyContainer"
+                                            onclick="copy('nh_test_120as09d80123asz098da0s', 'privateKey', 'privateKeyContainer')"
+                                            type="button"
+                                            class="m-0 rounded-3 border border-1 border-soft-200 py-2 px-20 fs-7 text-strong-900 d-flex align-items-center justify-content-between">
+                                            <span id="privateKey">nh_test_120as09d80123asz098da0s</span>
+                                            <span class="icon-copy text-sub-500 fs-6_5"></span>
+                                        </div>
                                     </div>
-                                </form>
+                                    <div class="col-lg-6 col-12">
+                                        <label for="" class="fs-7 text-strong-900 fw-medium mb-1">
+                                            Public Key
+                                        </label>
+                                        <div id="publicKeyContainer"
+                                            onclick="copy('nh_test_120as09d80123asz098da0s', 'publicKey', 'publicKeyContainer')"
+                                            type="button"
+                                            class="m-0 rounded-3 border border-1 border-soft-200 py-2 px-20 fs-7 text-strong-900 d-flex align-items-center justify-content-between">
+                                            <span id="publicKey">nh_test_120as09d80123asz098da0s</span>
+                                            <span class="icon-copy text-sub-500 fs-6_5"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <label for="" class="fs-7 text-strong-900 fw-medium mb-1">
+                                            Callback URL
+                                        </label>
+                                        <div id="callbackUrlContainer"
+                                            onclick="copy('https://api.noahlex.com/payments/callback', 'callbackUrl', 'callbackUrlContainer')"
+                                            type="button"
+                                            class="m-0 rounded-3 border border-1 border-soft-200 py-2 px-20 fs-7 text-strong-900 d-flex align-items-center justify-content-between">
+                                            <span id="callbackUrl">https://api.noahlex.com/payments/callback</span>
+                                            <span class="icon-copy text-sub-500 fs-6_5"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <label for="" class="fs-7 text-strong-900 fw-medium mb-1">
+                                            Webhook URL
+                                        </label>
+                                        <div id="webhookUrlContainer"
+                                            onclick="copy('https://api.noahlex.com/webhook-handler', 'webhookUrl', 'webhookUrlContainer')"
+                                            type="button"
+                                            class="m-0 rounded-3 border border-1 border-soft-200 py-2 px-20 fs-7 text-strong-900 d-flex align-items-center justify-content-between">
+                                            <span id="webhookUrl">https://api.noahlex.com/webhook-handler</span>
+                                            <span class="icon-copy text-sub-500 fs-6_5"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end gap-2">
+                                    <button type="button"
+                                        class="btn btn-outline-soft-200 btn-lg bg-white text-strong-900 fs-7">Generate
+                                        New API Keys</button>
+                                    <button type="button" class="btn btn-primary btn-lg btn-noah-primary fs-7">Save
+                                        Changes</button>
+                                </div>
+                            </div>
+                            <div action="" class="rounded-3 p-4 border border-1 border-soft-200">
+                                <h6 class="fs-6 text-strong-900 fw-medium mb-2">Your Test Keys</h6>
+                                <p class="text-sub-500 fs-7">Generate temporary credential for testing and development
+                                    in a sandboxed environment.</p>
+                                <div
+                                    class="p-12 mt-4 rounded-4 bg-warning-50 border border-1 border-warning-400 d-flex align-items-center gap-12">
+                                    <span class="icon-alert-circle-filled text-warning-900 fs-5"></span>
+                                    <span class="text-strong-900 fs-7">Never use test API keys in live/production
+                                        environments - doing so compromises security and system integrity.</span>
+                                </div>
+                                <div class="mb-4 mt-2 row g-4">
+                                    <div class="col-lg-6 col-12">
+                                        <label for="" class="fs-7 text-strong-900 fw-medium mb-1">
+                                            Private Key
+                                        </label>
+                                        <div id="tes_privateKeyContainer"
+                                            onclick="copy('nh_test_120as09d80123asz098da0s', 'tes_privateKey', 'tes_privateKeyContainer')"
+                                            type="button"
+                                            class="m-0 rounded-3 border border-1 border-soft-200 py-2 px-20 fs-7 text-strong-900 d-flex align-items-center justify-content-between">
+                                            <span id="tes_privateKey">nh_test_120as09d80123asz098da0s</span>
+                                            <span class="icon-copy text-sub-500 fs-6_5"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <label for="" class="fs-7 text-strong-900 fw-medium mb-1">
+                                            Public Key
+                                        </label>
+                                        <div id="tes_publicKeyContainer"
+                                            onclick="copy('nh_test_120as09d80123asz098da0s', 'tes_publicKey', 'tes_publicKeyContainer')"
+                                            type="button"
+                                            class="m-0 rounded-3 border border-1 border-soft-200 py-2 px-20 fs-7 text-strong-900 d-flex align-items-center justify-content-between">
+                                            <span id="tes_publicKey">nh_test_120as09d80123asz098da0s</span>
+                                            <span class="icon-copy text-sub-500 fs-6_5"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <label for="" class="fs-7 text-strong-900 fw-medium mb-1">
+                                            Callback URL
+                                        </label>
+                                        <div id="tes_callbackUrlContainer"
+                                            onclick="copy('https://api.noahlex.com/payments/callback', 'tes_callbackUrl', 'tes_callbackUrlContainer')"
+                                            type="button"
+                                            class="m-0 rounded-3 border border-1 border-soft-200 py-2 px-20 fs-7 text-strong-900 d-flex align-items-center justify-content-between">
+                                            <span id="tes_callbackUrl">https://api.noahlex.com/payments/callback</span>
+                                            <span class="icon-copy text-sub-500 fs-6_5"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <label for="" class="fs-7 text-strong-900 fw-medium mb-1">
+                                            Webhook URL
+                                        </label>
+                                        <div id="tes_webhookUrlContainer"
+                                            onclick="copy('https://api.noahlex.com/webhook-handler', 'tes_webhookUrl', 'tes_webhookUrlContainer')"
+                                            type="button"
+                                            class="m-0 rounded-3 border border-1 border-soft-200 py-2 px-20 fs-7 text-strong-900 d-flex align-items-center justify-content-between">
+                                            <span id="tes_webhookUrl">https://api.noahlex.com/webhook-handler</span>
+                                            <span class="icon-copy text-sub-500 fs-6_5"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end gap-2">
+                                    <button type="button"
+                                        class="btn btn-outline-soft-200 btn-lg bg-white text-strong-900 fs-7">Generate
+                                        New API Keys</button>
+                                    <button type="button" class="btn btn-primary btn-lg btn-noah-primary fs-7">Save
+                                        Changes</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--end::App Content-->
+                <!--end::App Content-->
         </main>
         <!--end::App Main-->
         <!-- Modal -->
@@ -967,6 +1070,21 @@
     </script>
     <script>
         document.getElementById("checkIndeterminate").indeterminate = true;
+    </script>
+    <script>
+        function copy(text, id, containerId) {
+            const textToCopy = document.getElementById(id).textContent;
+            const id_copy = document.getElementById(id);
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const container = document.getElementById(containerId);
+                container.classList.add('bg-soft-200');
+                id_copy.textContent = 'Copied!';
+                setTimeout(() => {
+                    container.classList.remove('bg-soft-200');
+                    id_copy.textContent = text;
+                }, 2000);
+            });
+        }
     </script>
     <!--end::Script-->
 </body>

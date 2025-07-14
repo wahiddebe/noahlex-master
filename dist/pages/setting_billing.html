@@ -423,11 +423,11 @@
                                 <h6 class="fs-7 fw-medium text-soft-400 mb-12 text-uppercase">Personal</h6>
                                 <div class="d-flex flex-column gap-2">
                                     <a href="setting.html"
-                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2  rounded-3 fw-medium fs-6_5">
                                         <span class="icon-user-circle text-strong-900 fs-5"></span>Account
                                     </a>
                                     <a href="setting_security.html"
-                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5 bg-weak-100">
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
                                         <span class="icon-lock text-strong-900 fs-5"></span>Security
                                     </a>
                                     <a href="setting_notification.html"
@@ -452,11 +452,11 @@
                                         <span class="icon-user-search text-strong-900 fs-5"></span>Roles
                                     </a>
                                     <a href="setting_billing.html"
-                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5 bg-weak-100">
                                         <span class="icon-credit-card text-strong-900 fs-5"></span>Billing
                                     </a>
                                     <a href="setting_api.html"
-                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5 ">
                                         <span class="icon-box text-strong-900 fs-5"></span>API
                                     </a>
                                     <a href="setting_integration.html"
@@ -467,38 +467,121 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-9 ps-3 py-3">
-                            <h4 class="text-strong-900 fw-medium mb-4">Security</h4>
-                            <div
-                                class="rounded-3 p-4 border border-1 border-soft-200 d-flex gap-3 align-items-center justify-content-between mb-4">
-                                <div class="">
-                                    <h6 class="fs-6_5 text-strong-900 fw-medium mb-2">Password</h6>
-                                    <p class="text-soft-400 fw-medium fs-7">Set a unique password to protect your
-                                        personal account.</p>
-                                </div>
-                                <button type="button" class="btn btn-medium btn-outline-soft-200 text-strong-900">Change
-                                    password</button>
-                            </div>
-                            <div
-                                class="rounded-3 p-4 border border-1 border-soft-200 d-flex gap-3 align-items-center justify-content-between mb-4">
-                                <div class="">
-                                    <h6 class="fs-6_5 text-strong-900 fw-medium mb-2">Two-factor authentication (2FA)
-                                    </h6>
-                                    <p class="text-soft-400 fw-medium fs-7">Two factor authentication adds extra account
-                                        security by requiring a unique access code, in addition to your email and
-                                        password.</p>
-                                </div>
-                                <form action="">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="switchCheckChecked" checked>
+                            <h4 class="text-strong-900 fw-medium mb-4">Billing</h4>
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <h6 class="fs-6 text-sub-500 fw-medium mb-2">Plans</h6>
+                                    <div class="rounded-3 p-2 border border-1 border-soft-200">
+                                        <div
+                                            class="p-3 rounded-2 bg-weak-100 d-flex align-items-center justify-content-between gap-2">
+                                            <h6 class="fs-6_5 text-strong-900 fw-medium">Core Project Plan</h6>
+                                            <a href="#"
+                                                class="text-decoration-none text-primary-500 fw-medium fs-6">Upgrade
+                                                plan</a>
+                                        </div>
+                                        <div class="p-3">
+                                            <div class="row mb-4">
+                                                <div class="col-lg-3 col-6 ">
+                                                    <p class="text-sub-500 fs-7">
+                                                        Payment
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-6 col-6 ">
+                                                    <p class="text-sub-500 fs-7">
+                                                        <span class="fw-medium text-strong-900">$199</span> per month
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-4">
+                                                <div class="col-lg-3 col-6 ">
+                                                    <p class="text-sub-500 fs-7">
+                                                        Next Payment
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-6 col-6 ">
+                                                    <p class=" fs-7">
+                                                        <span class=" text-strong-900 me-3">25 May 2025</span>
+                                                        <span><a href="#"
+                                                                class="text-decoration-none text-primary-500 fw-medium">Pay
+                                                                now</a></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="text-decoration-none text-error-600 fw-medium">Cancel
+                                                your subscription renewal</a>
+
+                                        </div>
                                     </div>
-                                </form>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <h6 class="fs-6 text-sub-500 fw-medium mb-2">Payment Details</h6>
+                                    <div
+                                        class="rounded-3 p-4 border border-1 border-soft-200 d-flex justify-content-between gap-4">
+                                        <div class="d-flex gap-4">
+                                            <img src="https://wahiddebe.github.io/iconmoon-master/images/mc.svg" alt="">
+                                            <div class="">
+                                                <p class="fs-6 text-strong-900 fw-medium mb-2">
+                                                    **** **** **** 4567
+                                                </p>
+                                                <p class="fs-7 text-soft-400">
+                                                    MasterCard — Expires 05/27
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a href="#"
+                                            class="text-decoration-none text-primary-500 fw-medium fs-7">Edit</a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <h6 class="fs-6 text-sub-500 fw-medium mb-2">Billing Information</h6>
+                                    <div class="rounded-3 p-4 border border-1 border-soft-200">
+                                        <div class="row mb-3">
+                                            <div class="col-6 ">
+                                                <p class="text-sub-500 fs-7">
+                                                    Customer Name
+                                                </p>
+                                            </div>
+                                            <div class="col-6 ">
+                                                <p class="fw-medium text-strong-900 fs-7">
+                                                    Jonas Khanwald
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-6 ">
+                                                <p class="text-sub-500 fs-7">
+                                                    Email Address
+                                                </p>
+                                            </div>
+                                            <div class="col-6 ">
+                                                <p class="fw-medium text-strong-900 fs-7">
+                                                    jonas@mail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-6 ">
+                                                <p class="text-sub-500 fs-7">
+                                                    Billing Address
+                                                </p>
+                                            </div>
+                                            <div class="col-6 ">
+                                                <p class="fw-medium text-strong-900 fs-7">
+                                                    Jl. Mencari Cinta Sejati,
+                                                    Semarang, Indonesia
+                                                    99201
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="text-decoration-none text-primary-500 fw-medium fs-7">Edit
+                                            billing information</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--end::App Content-->
+                <!--end::App Content-->
         </main>
         <!--end::App Main-->
         <!-- Modal -->
@@ -967,6 +1050,21 @@
     </script>
     <script>
         document.getElementById("checkIndeterminate").indeterminate = true;
+    </script>
+    <script>
+        function copy(text, id, containerId) {
+            const textToCopy = document.getElementById(id).textContent;
+            const id_copy = document.getElementById(id);
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const container = document.getElementById(containerId);
+                container.classList.add('bg-soft-200');
+                id_copy.textContent = 'Copied!';
+                setTimeout(() => {
+                    container.classList.remove('bg-soft-200');
+                    id_copy.textContent = text;
+                }, 2000);
+            });
+        }
     </script>
     <!--end::Script-->
 </body>
