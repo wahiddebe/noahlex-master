@@ -448,11 +448,11 @@
                                         <span class="icon-users text-strong-900 fs-5"></span>Users
                                     </a>
                                     <a href="setting_roles.html"
-                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5  ">
                                         <span class="icon-user-search text-strong-900 fs-5"></span>Roles
                                     </a>
                                     <a href="setting_billing.html"
-                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5 ">
+                                        class="text-decoration-none text-strong-900 p-10 d-flex align-items-center gap-2 rounded-3 fw-medium fs-6_5">
                                         <span class="icon-credit-card text-strong-900 fs-5"></span>Billing
                                     </a>
                                     <a href="setting_api.html"
@@ -467,117 +467,214 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-9 ps-3 py-3">
-                            <h4 class="text-strong-900 fw-medium mb-4">Users</h4>
-                            <div class="row g-4">
-                                <div class="col-12">
-                                    <h6 class="fs-6 text-sub-500 fw-medium mb-2">Plans</h6>
-                                    <div class="rounded-3 p-2 border border-1 border-soft-200">
-                                        <div
-                                            class="p-3 rounded-2 bg-weak-100 d-flex align-items-center justify-content-between gap-2">
-                                            <h6 class="fs-6_5 text-strong-900 fw-medium">Core Project Plan</h6>
-                                            <a href="setting_billing_plan.html"
-                                                class="text-decoration-none text-primary-500 fw-medium fs-6">Upgrade
-                                                plan</a>
-                                        </div>
-                                        <div class="p-3">
-                                            <div class="row mb-4">
-                                                <div class="col-lg-3 col-6 ">
-                                                    <p class="text-sub-500 fs-7">
-                                                        Payment
-                                                    </p>
-                                                </div>
-                                                <div class="col-lg-6 col-6 ">
-                                                    <p class="text-sub-500 fs-7">
-                                                        <span class="fw-medium text-strong-900">$199</span> per month
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-4">
-                                                <div class="col-lg-3 col-6 ">
-                                                    <p class="text-sub-500 fs-7">
-                                                        Next Payment
-                                                    </p>
-                                                </div>
-                                                <div class="col-lg-6 col-6 ">
-                                                    <p class=" fs-7">
-                                                        <span class=" text-strong-900 me-3">25 May 2025</span>
-                                                        <span><a href="#"
-                                                                class="text-decoration-none text-primary-500 fw-medium">Pay
-                                                                now</a></span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <a href="#" class="text-decoration-none text-error-600 fw-medium">Cancel
-                                                your subscription renewal</a>
+                            <div class="d-flex justify-content-between align-items-center gap-2 mb-4">
+                                <h4 class="text-strong-900 fw-medium">Users</h4>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#add"
+                                        class="btn btn-outline-soft-200 text-strong-900 bg-white btn-sm fs-8 d-flex align-items-center gap-2">
+                                        <span class="icon-download fs-6 "></span> Import</button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#add"
+                                        class="btn btn-primary btn-noah-primary btn-sm fs-8 d-flex align-items-center gap-2">
+                                        <span class="icon-plus fs-6 "></span> Add User</button>
+                                </div>
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <h6 class="fs-6 text-sub-500 fw-medium mb-2">Payment Details</h6>
-                                    <div
-                                        class="rounded-3 p-4 border border-1 border-soft-200 d-flex justify-content-between gap-4">
-                                        <div class="d-flex gap-4">
-                                            <img src="https://wahiddebe.github.io/iconmoon-master/images/mc.svg" alt="">
-                                            <div class="">
-                                                <p class="fs-6 text-strong-900 fw-medium mb-2">
-                                                    **** **** **** 4567
-                                                </p>
-                                                <p class="fs-7 text-soft-400">
-                                                    MasterCard — Expires 05/27
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <a href="#"
-                                            class="text-decoration-none text-primary-500 fw-medium fs-7">Edit</a>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <h6 class="fs-6 text-sub-500 fw-medium mb-2">Billing Information</h6>
-                                    <div class="rounded-3 p-4 border border-1 border-soft-200">
-                                        <div class="row mb-3">
-                                            <div class="col-6 ">
-                                                <p class="text-sub-500 fs-7">
-                                                    Customer Name
-                                                </p>
-                                            </div>
-                                            <div class="col-6 ">
-                                                <p class="fw-medium text-strong-900 fs-7">
-                                                    Jonas Khanwald
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-6 ">
-                                                <p class="text-sub-500 fs-7">
-                                                    Email Address
-                                                </p>
-                                            </div>
-                                            <div class="col-6 ">
-                                                <p class="fw-medium text-strong-900 fs-7">
-                                                    jonas@mail.com
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-4">
-                                            <div class="col-6 ">
-                                                <p class="text-sub-500 fs-7">
-                                                    Billing Address
-                                                </p>
-                                            </div>
-                                            <div class="col-6 ">
-                                                <p class="fw-medium text-strong-900 fs-7">
-                                                    Jl. Mencari Cinta Sejati,
-                                                    Semarang, Indonesia
-                                                    99201
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="text-decoration-none text-primary-500 fw-medium fs-7">Edit
-                                            billing information</a>
-                                    </div>
-                                </div>
                             </div>
+                            <table id="DocTable" class="border-1 border-soft-200 rounded-3 border">
+                                <thead class="fs-7">
+                                    <tr class="bg-weak-100">
+                                        <th class="">Name</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                        <th>2FA Method</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="">
+                                    <tr>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="../assets/images/avatar.svg" alt=""
+                                                    class="img-fluid rounded-circle" width="32" height="32">
+                                                Olivia Rhye
+                                            </div>
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            olivia@mail.com
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            Super Admin
+                                        </td>
+                                        <td class="text-soft-400 fw-medium fs-7">
+                                            None
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class=" d-flex align-items-center gap-2">
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-trash text-error-600 fs-6_5"></a>
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-pencil text-soft-400 fs-6_5"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="../assets/images/avatar.svg" alt=""
+                                                    class="img-fluid rounded-circle" width="32" height="32">
+                                                Phoenix Baker
+                                            </div>
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            phoenix@mail.com
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            Super Admin
+                                        </td>
+                                        <td class="text-soft-400 fw-medium fs-7">
+                                            None
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class=" d-flex align-items-center gap-2">
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-trash text-error-600 fs-6_5"></a>
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-pencil text-soft-400 fs-6_5"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="../assets/images/avatar.svg" alt=""
+                                                    class="img-fluid rounded-circle" width="32" height="32">
+                                                Lana Steiner
+                                            </div>
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            lana@mail.com
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            Super Admin
+                                        </td>
+                                        <td class="text-soft-400 fw-medium fs-7">
+                                            None
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class=" d-flex align-items-center gap-2">
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-trash text-error-600 fs-6_5"></a>
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-pencil text-soft-400 fs-6_5"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="../assets/images/avatar.svg" alt=""
+                                                    class="img-fluid rounded-circle" width="32" height="32">
+                                                Drew Cano
+                                            </div>
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            drew@mail.com
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            Super Admin
+                                        </td>
+                                        <td class="text-soft-400 fw-medium fs-7">
+                                            None
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class=" d-flex align-items-center gap-2">
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-trash text-error-600 fs-6_5"></a>
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-pencil text-soft-400 fs-6_5"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="../assets/images/avatar.svg" alt=""
+                                                    class="img-fluid rounded-circle" width="32" height="32">
+                                                Natail Craig
+                                            </div>
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            natail@mail.com
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            Super Admin
+                                        </td>
+                                        <td class="text-soft-400 fw-medium fs-7">
+                                            None
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class=" d-flex align-items-center gap-2">
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-trash text-error-600 fs-6_5"></a>
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-pencil text-soft-400 fs-6_5"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="../assets/images/avatar.svg" alt=""
+                                                    class="img-fluid rounded-circle" width="32" height="32">
+                                                Kate Morrison
+                                            </div>
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            kate@mail.com
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            Super Admin
+                                        </td>
+                                        <td class="text-soft-400 fw-medium fs-7">
+                                            None
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class=" d-flex align-items-center gap-2">
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-trash text-error-600 fs-6_5"></a>
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-pencil text-soft-400 fs-6_5"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="../assets/images/avatar.svg" alt=""
+                                                    class="img-fluid rounded-circle" width="32" height="32">
+                                                Orlando Diggs
+                                            </div>
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            orlando@mail.com
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            Super Admin
+                                        </td>
+                                        <td class="text-soft-400 fw-medium fs-7">
+                                            None
+                                        </td>
+                                        <td class="text-strong-900 fw-medium fs-7">
+                                            <div class=" d-flex align-items-center gap-2">
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-trash text-error-600 fs-6_5"></a>
+                                                <a href="#" type="button"
+                                                    class="text-decoration-none icon-pencil text-soft-400 fs-6_5"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
                         </div>
                     </div>
                 </div>
@@ -934,6 +1031,9 @@
             $('#DocTable').DataTable({
                 scrollX: true,
                 searching: false,
+                "bPaginate": false,
+                "bInfo": false,
+                "ordering": false,
                 "bLengthChange": false,
                 "language": {
                     "emptyTable": `
