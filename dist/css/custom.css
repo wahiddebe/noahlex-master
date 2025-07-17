@@ -270,7 +270,12 @@ p{
   table.dataTable > thead > tr > th, table.dataTable > thead > tr > td  {
     border-bottom: none;
 }
- 
+div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover{
+    background-color: #2457D9 !important;
+    color: white !important;
+    border-radius: 0.5rem !important;
+    border-color: #2457D9 !important;
+}
 div.dt-container.dt-empty-footer .dt-scroll-body {
   border-bottom: none;
 }
@@ -298,4 +303,13 @@ div.dt-container.dt-empty-footer .dt-scroll-body {
 
 .text-warning-900{
   color: #78350F !important;
+}
+
+.btn-plan.active{
+  background-color: white;
+  color: #0A0D14;
+}
+.btn-plan{
+
+  color: #525866;
 }

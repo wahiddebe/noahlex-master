@@ -179,13 +179,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="document.html" class="nav-link active">
+              <a href="document.html" class="nav-link">
                 <i class="nav-icon icon-files fs-5"></i>
                 <p class="fs-7 ">Documents</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="approval.html" class="nav-link ">
+              <a href="approval.html" class="nav-link active">
                 <i class="nav-icon icon-checkbox fs-5"></i>
                 <p class="fs-7 ">Approvals</p>
               </a>
@@ -390,13 +390,16 @@
           <!--begin::Row-->
           <div class="gap-12 d-flex align-items-center justify-content-between">
             <div class="">
-              <h4 class="text-strong-900 fw-medium mb-2">Documents</h4>
-              <p class="text-soft-400 fw-medium fs-7">See all documents in all projects</p>
+              <h4 class="text-strong-900 fw-medium mb-2">Approvals</h4>
+              <p class="text-soft-400 fw-medium fs-7">Review all documents requiring approval here</p>
             </div>
             <div class="">
-              <button type="button" data-bs-toggle="modal" data-bs-target="#uploadModal"
-                class="btn btn-primary btn-noah-primary btn-sm fs-8 d-flex align-items-center gap-2">
-                <span class="icon-upload fs-6 "></span> Upload Document</button>
+              <select class="form-select form-select-lg w-100" placeholder="Select month" id="month"
+                aria-placeholder="Select month" aria-label="Default select example">
+                <option value="1">1 months</option>
+                <option value="2">2 months</option>
+                <option value="3">3 months</option>
+              </select>
             </div>
           </div>
           <!--end::Row-->
@@ -408,9 +411,30 @@
       <div class="app-content">
         <!--begin::Container-->
         <div class="container-fluid">
+          <div class="mb-4 row g-4">
+            <div class="col-12 col-lg-6">
+              <div class="p-4 rounded-4 border border-1 border-soft-200">
+                <div class="mb-12 d-flex align-items-center gap-2">
+                  <span class="icon-checkbox text-primary-500 fs-6_5"></span>
+                  <h1 class="fs-7 text-soft-400 fw-medium">Approved Document</h1>
+                </div>
+                <h4 class="text-strong-900 fw-medium">18 documents</h4>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="p-4 rounded-4 border border-1 border-soft-200">
+                <div class="mb-12 d-flex align-items-center gap-2">
+                  <span class="icon-circle-x text-error-600 fs-6_5"></span>
+                  <h1 class="fs-7 text-soft-400 fw-medium">Rejected Document</h1>
+                </div>
+                <h4 class="text-strong-900 fw-medium">2 documents</h4>
+              </div>
+            </div>
+
+          </div>
           <div class="">
             <div class=" d-flex justify-content-between align-items-center gap-2 mb-4">
-              <h1 class="mb-0 fs-6_5 text-strong-900 fw-medium">Documents List</h1>
+              <h1 class="mb-0 fs-6_5 text-strong-900 fw-medium">All Documents</h1>
               <div class="d-flex align-items-center gap-2">
 
                 <button type="button"
@@ -907,118 +931,7 @@
   </script>
   <script>
     $(document).ready(function () {
-      $('#AssignType').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1,
-          dropdownAutoWidth: true,
-          width: '100%',
-
-        }
-      );
-      $('.filter').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1
-
-        }
-      );
-      $('.filter-1').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1
-
-        }
-      );
-      $('.filter-2').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1
-
-        }
-      );
-      $('.filter-3').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1
-
-        }
-      );
-      $('.filter-4').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1
-
-        }
-      );
-      $('#project').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1,
-          dropdownAutoWidth: true,
-          width: '100%',
-
-        }
-      );
-      $('#tags').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1,
-          dropdownAutoWidth: true,
-          width: '100%',
-
-        }
-      );
-      $('#projectType').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1,
-          dropdownAutoWidth: true,
-          width: '100%',
-
-        }
-      );
-      $('#projectStatus').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1,
-          dropdownAutoWidth: true,
-          width: '100%',
-
-        }
-      );
-      $('#projectManager').select2(
-        {
-          theme: 'bootstrap-5',
-          placeholder: $(this).data('placeholder'),
-          // closeOnSelect: false,
-          minimumResultsForSearch: -1,
-          dropdownAutoWidth: true,
-          width: '100%',
-
-        }
-      );
-      $('#bulktype').select2(
+      $('#month').select2(
         {
           theme: 'bootstrap-5',
           placeholder: $(this).data('placeholder'),

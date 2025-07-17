@@ -157,7 +157,7 @@
                 </li> -->
 
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link active">
+                            <a href="index.html" class="nav-link">
                                 <i class="nav-icon icon-dashboard fs-5"></i>
                                 <p class="fs-7 ">Dashboard</p>
                             </a>
@@ -187,7 +187,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="approval.html" class="nav-link">
                                 <i class="nav-icon icon-checkbox fs-5"></i>
                                 <p class="fs-7 ">Approvals</p>
                             </a>
@@ -200,17 +200,12 @@
                         </li>
                         <li class="nav-item">
 
-                            <a href="setting.html" class="nav-link">
+                            <a href="setting.html" class="nav-link active">
 
 
-                                <a href="setting.html" class="nav-link">
-
-                                    <a href="#" class="nav-link">
-
-
-                                        <i class="nav-icon icon-settings-2 fs-5"></i>
-                                        <p class="fs-7 ">Settings</p>
-                                    </a>
+                                <i class="nav-icon icon-settings-2 fs-5"></i>
+                                <p class="fs-7 ">Settings</p>
+                            </a>
                         </li>
                         <div class="w-100 border-bottom border-1 border-soft-200 my-3"></div>
                         <li class="nav-item menu-open">
@@ -467,11 +462,49 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-9 ps-3 py-3">
-
+                            <div class="text-center mb-4">
+                                <h4 class="text-strong-900 fw-medium mb-12">Choose the Right Plan for Your Projects</h4>
+                                <p class="text-soft-400 fs-6">Flexible, Scalable pricing designed for renewable energy
+                                    teams of all sizes</p>
+                            </div>
+                            <div class="">
+                                <div class="d-flex align-items-center justify-content-center mb-4">
+                                    <div class="p-1 bg-weak-100 rounded-pill d-flex">
+                                        <div class="fw-medium btn-plan py-12 px-4 rounded-pill active" type="button"
+                                            id="monthlyPlan">
+                                            Monthly</div>
+                                        <div class="fw-medium btn-plan py-12 px-4 rounded-pill " type="button"
+                                            id="yearlyPlan">Yearly</div>
+                                    </div>
+                                </div>
+                                <div class="" id="monthlyPlanContent">
+                                    <div class="row g-3">
+                                        <div class="col-lg-4 col-12">
+                                            <div class="p-4 rounded-4 border border-1 border-soft-200">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-12">
+                                            <div class="p-4 rounded-4 border border-1 border-soft-200">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-12">
+                                            <div class="p-4 rounded-4 border border-1 border-soft-200">
+                                            </div>
+                                        </div>
+                                        <div class=" col-12">
+                                            <div class="p-4 rounded-4 border border-1 border-soft-200">
+                                            </div>
+                                        </div>
+                                        <div class=" col-12">
+                                            <div class="p-4 rounded-4 border border-1 border-soft-200">
+                                            </div>
+                                        </div>
+                                        <div class="d-none" id="yearlyPlanContent">2</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <!--end::App Content-->
+                        <!--end::App Content-->
         </main>
         <!--end::App Main-->
         <!-- Modal -->
@@ -955,6 +988,21 @@
                 }, 2000);
             });
         }
+    </script>
+    <script>
+        document.getElementById("monthlyPlan").addEventListener("click", function () {
+            document.getElementById("monthlyPlanContent").classList.remove("d-none");
+            document.getElementById("yearlyPlanContent").classList.add("d-none");
+            document.getElementById("monthlyPlan").classList.add("active");
+            document.getElementById("yearlyPlan").classList.remove("active");
+        });
+
+        document.getElementById("yearlyPlan").addEventListener("click", function () {
+            document.getElementById("yearlyPlanContent").classList.remove("d-none");
+            document.getElementById("monthlyPlanContent").classList.add("d-none");
+            document.getElementById("yearlyPlan").classList.add("active");
+            document.getElementById("monthlyPlan").classList.remove("active");
+        });
     </script>
     <!--end::Script-->
 </body>
