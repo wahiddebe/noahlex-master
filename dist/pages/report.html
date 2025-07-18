@@ -46,8 +46,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css"
     integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://wahiddebe.github.io/iconmoon-master/style.css" />
-  <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
-
   <link rel="stylesheet" href="../css/custom.css" />
 
 
@@ -191,7 +189,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="report.html" class="nav-link">
+              <a href="report.html" class="nav-link active">
                 <i class="nav-icon icon-clipboard-text fs-5"></i>
                 <p class="fs-7 ">Reports</p>
               </a>
@@ -384,16 +382,15 @@
         </div>
       </div>
       <!--begin::App Content Header-->
-      <div class="app-content-header mb-4 border-bottom border-1 border-soft-200-70 py-4">
+      <div class="app-content-header py-4">
         <!--begin::Container-->
         <div class="container-fluid">
           <!--begin::Row-->
-          <div class="gap-12 d-flex align-items-center">
-            <a href="index.html" class="text-sub-500 icon-arrow-left fs-6_5 text-decoration-none">
-            </a>
-            <p class="text-soft-400 fw-medium fs-6_5">Dashboard</p>
-            <p class="text-soft-400 fw-medium fs-6_5">/</p>
-            <p class="text-strong-900 fw-medium fs-6_5">Alabama BESS</p>
+          <div class="d-flex align-items-center justify-content-between gap-2">
+            <div class="">
+              <h4 class="text-strong-900 fw-medium mb-2">Reports</h4>
+              <p class="text-soft-400 fw-medium fs-7">Assist you in comprehending your document funnel.</p>
+            </div>
           </div>
           <!--end::Row-->
         </div>
@@ -404,81 +401,81 @@
       <div class="app-content">
         <!--begin::Container-->
         <div class="container-fluid">
-          <div class="mb-4">
-            <div class="d-flex gap-3 mb-2 align-items-center">
-              <h4 class="text-strong-900 fw-medium">Alabama BESS</h4>
-              <div
-                class="d-flex gap-2 align-items-center justify-content-center py-2 px-12 border border-1 border-soft-200 rounded-pill">
-                <div class="p-1  bg-neutral-500 rounded-circle">
+          <div class="dashboard-tab">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link border-top-0 border-end-0 border-start-0 border-bottom active" id="home-tab"
+                  data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                  aria-selected="true">Overview</button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link border-top-0 border-end-0 border-start-0 border-bottom" id="contact-tab"
+                  data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact"
+                  aria-selected="false">Activity</button>
+              </li>
+            </ul>
+
+            <div class="tab-content mt-32" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+              </div>
+              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="d-flex justify-content-between gap-1 mb-4">
+                  <h6 class="fs-6_5 fw-medium text-strong-900">
+                    Activity Log
+                  </h6>
+                  <button type="button"
+                    class="btn-sm btn btn-outline-soft-200 text-strong-900 d-flex align-items-center gap-2">
+                    <span class="icon-printer text-sub-500 fs-6 "></span>
+                    Export
+                  </button>
                 </div>
-                <p class=" text-neutral-500 fs-8 fw-medium">Feasibility</p>
-              </div>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-              <p class=" text-soft-400 fs-6 fw-medium">Ackerville</p>
-              <div class="p-1  bg-soft-400 rounded-circle">
-              </div>
-              <p class=" text-soft-400 fs-6 fw-medium">Alabama</p>
+                <div class="d-flex flex-column align-items-strecth gap-4">
+                  <div class="d-flex flex-column flex-lg-row gap-3">
+                    <div class="col-12 col-lg-4">
+                      <h6 class="fs-6_5 fw-medium text-strong-900">
+                        Today
+                      </h6>
+                    </div>
+                    <div class="d-flex flex-column gap-3">
+                      <div class="d-flex align-items-center gap-3">
+                        <div
+                          class="text-center fw-medium text-primary-500 fs-6 rounded-circle bg-primary-50 circle-div-32">
+                          J</div>
+                        <p class="fw-medium fs-6 text-soft-400">
+                          <span class="text-strong-900">Jonas Khanwald</span> was removed from the workspace by <span
+                            class="text-strong-900">Martha
+                            Nielsen.</span>
+                        </p>
 
-
-            </div>
-          </div>
-          <div class="rounded-4 bg-weak-100 p-12 mb-4">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-              <p class=" text-sub-500 fs-6 fw-medium">Alabama</p>
-              <button type="button" data-bs-toggle="modal" data-bs-target="#addfolderModal"
-                class="btn btn-primary btn-noah-primary btn-sm fs-8 d-flex align-items-center gap-2">
-                <span class="icon-plus fs-6 "></span> Add Folder</button>
-            </div>
-
-            <div class="row g-3" id="row-folders">
-              <div class="col-12 col-lg-3">
-                <div
-                  class="p-3 gap-12 d-flex align-items-center justify-content-between bg-white border border-1 border-soft-200 rounded-3">
-                  <div class="d-flex align-items-center gap-12">
-                    <span class="icon-folder h4 text-primary-500"></span>
-                    <p class="text-strong-900 fs-7 fw-medium">Cool Folder</p>
+                      </div>
+                    </div>
                   </div>
-                  <span class="icon-grip-vertical fs-6_5 text-soft-400"></span>
+                  <hr class="m-0 border border-1 border-soft-200">
+                  <div class="d-flex flex-column flex-lg-row gap-3">
+                    <div class="col-12 col-lg-4">
+                      <h6 class="fs-6_5 fw-medium text-strong-900">
+                        Yesterday
+                      </h6>
+                    </div>
+                    <div class="d-flex flex-column gap-3">
+                      <div class="d-flex align-items-center gap-3">
+                        <div
+                          class="text-center fw-medium text-primary-500 fs-6 rounded-circle bg-primary-50 circle-div-32">
+                          J</div>
+                        <p class="fw-medium fs-6 text-soft-400">
+                          <span class="text-strong-900">Jonas Khanwald</span> was removed from the workspace by <span
+                            class="text-strong-900">Martha
+                            Nielsen.</span>
+                        </p>
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-
             </div>
-          </div>
-          <div class="">
-            <div class=" d-flex justify-content-between align-items-center gap-2 mb-4">
-              <h1 class="mb-0 fs-6_5 text-strong-900 fw-medium">Documents</h1>
-              <div class="d-flex align-items-center gap-2">
-
-                <button type="button"
-                  class="btn-sm btn btn-outline-soft-200 text-strong-900 d-flex align-items-center gap-2">
-                  <span class="icon-filter text-sub-500 fs-6 "></span>
-                  Filter
-                </button>
-                <button type="button"
-                  class="btn-sm btn btn-outline-soft-200 text-strong-900 d-flex align-items-center gap-2">
-                  <span class="icon-sort-ascending text-sub-500 fs-6 "></span>
-                  Sort
-                </button>
-
-              </div>
-
-            </div>
-            <table id="DocTable" class="border-1 border-soft-200 rounded-3 border">
-              <thead class="fs-7">
-                <tr class="bg-weak-100">
-                  <th class="">Filename</th>
-                  <th>Uploaded</th>
-                  <th>Status</th>
-                  <th>Tags</th>
-                  <th>Version</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody class="">
-              </tbody>
-            </table>
-            <!--end::Container-->
           </div>
         </div>
       </div>
@@ -588,8 +585,36 @@
     </div>
 
 
-
-
+    <!-- Modal Add Folder -->
+    <div class=" modal fade" id="addfolderModal" tabindex="-1" aria-labelledby="addfolderModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0 p-4">
+            <h1 class="modal-title fs-5 fw-medium text-strong-900" id="exampleModalLabel">Create New Folder</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body py-0">
+            <form action="">
+              <div class="row">
+                <div class="col-12">
+                  <div class="">
+                    <label for="email" class="form-label text-sub-500 fw-medium fs-8">Folder Name</label>
+                    <input type="text" class="form-control form-control-lg" id="folderName"
+                      placeholder="Input folder name" required>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer border-0 p-4 d-flex align-items-center gap-2">
+            <button type="button" class="btn btn-medium btn-outline-soft-200 text-strong-900"
+              data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-medium btn-primary btn-noah-primary"
+              onclick="saveFolder()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Modal -->
     <div class=" modal fade" id="createProjectModal" tabindex="-1" aria-labelledby="createProjectModalLabel"
       aria-hidden="true">
@@ -699,220 +724,590 @@
               <button type="button" class="btn btn-medium btn-primary btn-noah-primary">Next</button>
             </div>
 
+            <!-- Modal -->
+            <div class=" modal fade" id="createProjectModal" tabindex="-1" aria-labelledby="createProjectModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header border-0 p-4">
+                    <h1 class="modal-title fs-5 fw-medium text-strong-900" id="exampleModalLabel">Create New Project
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body px-4 py-0">
+                    <form action="">
+                      <p class="text-strong-900 fw-medium fs-7">Project Details</p>
+                      <div class="row g-3 mb-4">
+                        <div class="col-12">
+                          <div class="py-2">
+                            <label for="uploadfile" class="form-label text-sub-500 fw-medium fs-8">Upload
+                              File</label>
+                            <input class="form-control" type="file" id="uploadfile" hidden>
+                            <label for="uploadfile"
+                              class="w-100 d-flex justify-content-center align-items-center gap-3 flex-column py-5 border border-1 border-soft-200 rounded-3">
+                              <span class="icon-upload text-sub-500 fs-3"></span>
+                              <div class="">
+                                <p class="fs-7 fw-medium text-sub-500"><span class="text-primary-500 fw-bold">Click
+                                    to
+                                    upload</span> or
+                                  <span class="fw-bold">drag and drop here</span>
+                                </p>
+                                <p class="fs-7 fw-medium text-sub-500">SVG, PNG, JPG or GIF (max. 1200x800px)</p>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                          <div class="">
+                            <label for="projectName" class="form-label text-sub-500 fw-medium fs-8">Project Name</label>
+                            <input type="text" class="form-control form-control-lg" id="projectName"
+                              placeholder="Project Name" required>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                          <div class="w-100">
+                            <label for="project" class="form-label text-sub-500 fw-medium fs-8">Type</label>
+                            <select class="form-select form-select-lg w-100" placeholder="Select Type" id="projectType"
+                              aria-placeholder="Select Type" aria-label="Default select example">
+                              <option value="1">Solar</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                          <div class="">
+                            <label for="projectLocation" class="form-label text-sub-500 fw-medium fs-8">Location</label>
+                            <input type="text" class="form-control form-control-lg" id="projectLocation"
+                              placeholder="Enter Location" required>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                          <div class="">
+                            <label for="projectDates" class="form-label text-sub-500 fw-medium fs-8">Dates</label>
+                            <input type="date" class="form-control form-control-lg" id="projectDates"
+                              placeholder="Enter Dates" required>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                          <div class="w-100">
+                            <label for="projectStatus" class="form-label text-sub-500 fw-medium fs-8">Status</label>
+                            <select class="form-select form-select-lg w-100" placeholder="Select Status"
+                              id="projectStatus" aria-placeholder="Select Status" aria-label="Default select example">
+                              <option value="1">Development</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                          <div class="">
+                            <label for="projectSize" class="form-label text-sub-500 fw-medium fs-8">Project Size</label>
+                            <input type="text" class="form-control form-control-lg" id="projectSize"
+                              placeholder="Enter Size" required>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="text-strong-900 fw-medium fs-7">Project Configuration</p>
+                      <div class="row g-3">
+                        <div class="col-12">
+                          <div class="w-100">
+                            <label for="projectManager" class="form-label text-sub-500 fw-medium fs-8">Project
+                              Manager</label>
+                            <select class="form-select form-select-lg w-100" placeholder="Select Status"
+                              id="projectManager" aria-placeholder="Select Project Manager"
+                              aria-label="Default select example">
+                              <option value="1">Lana Steiner</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-check text-sub-500 fw-medium fs-7">
+                            <input class="form-check-input" type="checkbox" value="" id="workflow">
+                            <label class="form-check-label" for="workflow">
+                              Enable workflow and logs
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer border-0 p-4 d-flex align-items-center justify-content-between gap-2">
+                    <p class="text-sub-500 fw-medium fs-7">Step <span>1</span> of 3</p>
+                    <div class="d-flex align-items-center gap-2">
+                      <button type="button" class="btn btn-medium btn-outline-soft-200 text-strong-900"
+                        data-bs-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-medium btn-primary btn-noah-primary">Next</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Toast Notification -->
+            <div class="toast-container position-fixed top-0 end-0 p-20">
+              <div id="liveToast" class="toast w-auto bg-white rounded-3 p-3 border border-1 border-soft-200"
+                role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex justify-content-between align-items-center gap-2">
+                  <div class="d-flex align-items-center gap-12">
+                    <span class="icon-circle-check-filled fs-6_5 text-success-700"></span>
+                    <p class="fs-6 text-strong-900 fw-medium text-nowrap" id="Livetoast-text">
+                    </p>
+                  </div>
+                  <button type=" button" class="bg-white p-0 border-0 icon-x text-soft-400 fs-6" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+                </div>
+
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- Toast Notification -->
-    <div class="toast-container position-fixed top-0 end-0 p-20">
-      <div id="liveToast" class="toast w-auto bg-white rounded-3 p-3 border border-1 border-soft-200" role="alert"
-        aria-live="assertive" aria-atomic="true">
-        <div class="d-flex justify-content-between align-items-center gap-2">
-          <div class="d-flex align-items-center gap-12">
-            <span class="icon-circle-check-filled fs-6_5 text-success-700"></span>
-            <p class="fs-6 text-strong-900 fw-medium text-nowrap" id="Livetoast-text">
-            </p>
-          </div>
-          <button type=" button" class="bg-white p-0 border-0 icon-x text-soft-400 fs-6" data-bs-dismiss="toast"
-            aria-label="Close"></button>
-        </div>
+          <!--end::App Wrapper-->
+          <!--begin::Script-->
+          <!--begin::Third Party Plugin(OverlayScrollbars)-->
+          <script
+            src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
+            integrity="sha256-dghWARbRe2eLlIJ56wNB+b760ywulqK3DzZYEpsg2fQ=" crossorigin="anonymous"></script>
+          <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+          <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+            integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+            crossorigin="anonymous"></script>
+          <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
+          <script src="../../dist/js/adminlte.js"></script>
+          <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
+          <script>
+            const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
+            const Default = {
+              scrollbarTheme: 'os-theme-light',
+              scrollbarAutoHide: 'leave',
+              scrollbarClickScroll: true,
+            };
+            document.addEventListener('DOMContentLoaded', function () {
+              const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+              if (sidebarWrapper && typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== 'undefined') {
+                OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+                  scrollbars: {
+                    theme: Default.scrollbarTheme,
+                    autoHide: Default.scrollbarAutoHide,
+                    clickScroll: Default.scrollbarClickScroll,
+                  },
+                });
+              }
+            });
+          </script>
+          <!--end::OverlayScrollbars Configure-->
+          <!-- OPTIONAL SCRIPTS -->
+          <!-- sortablejs -->
+          <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"
+            integrity="sha256-ipiJrswvAR4VAx/th+6zWsdeYmVae0iJuiR+6OqHJHQ=" crossorigin="anonymous"></script>
+          <!-- sortablejs -->
+          <script>
+            const connectedSortables = document.querySelectorAll('.connectedSortable');
+            connectedSortables.forEach((connectedSortable) => {
+              let sortable = new Sortable(connectedSortable, {
+                group: 'shared',
+                handle: '.card-header',
+              });
+            });
 
-      </div>
+            const cardHeaders = document.querySelectorAll('.connectedSortable .card-header');
+            cardHeaders.forEach((cardHeader) => {
+              cardHeader.style.cursor = 'move';
+            });
+          </script>
+          <!-- apexcharts -->
+          <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js"
+            integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous"></script>
+          <!-- ChartJS -->
 
-    </div>
-  </div>
-  <!--end::App Wrapper-->
-  <!--begin::Script-->
-  <!--begin::Third Party Plugin(OverlayScrollbars)-->
-  <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
-    integrity="sha256-dghWARbRe2eLlIJ56wNB+b760ywulqK3DzZYEpsg2fQ=" crossorigin="anonymous"></script>
-  <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"></script>
-  <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-  <script src="../../dist/js/adminlte.js"></script>
-  <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
-  <script>
-    const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
-    const Default = {
-      scrollbarTheme: 'os-theme-light',
-      scrollbarAutoHide: 'leave',
-      scrollbarClickScroll: true,
-    };
-    document.addEventListener('DOMContentLoaded', function () {
-      const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
-      if (sidebarWrapper && typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== 'undefined') {
-        OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
-          scrollbars: {
-            theme: Default.scrollbarTheme,
-            autoHide: Default.scrollbarAutoHide,
-            clickScroll: Default.scrollbarClickScroll,
-          },
-        });
-      }
-    });
-  </script>
-  <!--end::OverlayScrollbars Configure-->
-  <!-- OPTIONAL SCRIPTS -->
-  <!-- sortablejs -->
-  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"
-    integrity="sha256-ipiJrswvAR4VAx/th+6zWsdeYmVae0iJuiR+6OqHJHQ=" crossorigin="anonymous"></script>
-  <!-- sortablejs -->
-  <script>
-    const connectedSortables = document.querySelectorAll('.connectedSortable');
-    connectedSortables.forEach((connectedSortable) => {
-      let sortable = new Sortable(connectedSortable, {
-        group: 'shared',
-        handle: '.card-header',
-      });
-    });
-
-    const cardHeaders = document.querySelectorAll('.connectedSortable .card-header');
-    cardHeaders.forEach((cardHeader) => {
-      cardHeader.style.cursor = 'move';
-    });
-  </script>
-  <!-- apexcharts -->
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js"
-    integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous"></script>
-  <!-- ChartJS -->
-
-  <!-- jsvectormap -->
-  <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js"
-    integrity="sha256-/t1nN2956BT869E6H4V1dnt0X5pAQHPytli+1nTZm2Y=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js"
-    integrity="sha256-XPpPaZlU8S/HWf7FZLAncLg2SAkP8ScUTII89x9D3lY=" crossorigin="anonymous"></script>
+          <!-- jsvectormap -->
+          <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js"
+            integrity="sha256-/t1nN2956BT869E6H4V1dnt0X5pAQHPytli+1nTZm2Y=" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js"
+            integrity="sha256-XPpPaZlU8S/HWf7FZLAncLg2SAkP8ScUTII89x9D3lY=" crossorigin="anonymous"></script>
 
 
-  <!-- jsvectormap -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('#DocTable').DataTable({
-        scrollX: true,
-        searching: false,
-        "bLengthChange": false,
-        "language": {
-          "emptyTable": `
-          <div class="text-center p-4 min-vh-50 d-flex flex-column justify-content-center align-items-center">
-            <img src="https://wahiddebe.github.io/iconmoon-master/images/empty.svg" alt="No Data" class="img-fluid mb-3" width="100" height="100">
-            <p class="fs-7 text-soft-400 mb-12">No data available in table</p>
-                      <button type="button" data-bs-toggle="modal" data-bs-target="#createProjectModal"
-                class="btn btn-primary btn-noah-primary btn-sm fs-8 d-flex align-items-center gap-2">
-                <span class="icon-plus fs-6 "></span> Upload Document</button>
-          </div>
-          `
-        }
+          <!-- jsvectormap -->
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+          <script>
+            $(document).ready(function () {
+              $('#AssignType').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1,
+                  dropdownAutoWidth: true,
+                  width: '100%',
 
-      });
+                }
+              );
+              $('.filter').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1
 
-    });
+                }
+              );
+              $('.filter-1').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1
+
+                }
+              );
+              $('.filter-2').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1
+
+                }
+              );
+              $('.filter-3').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1
+
+                }
+              );
+              $('.filter-4').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1
+
+                }
+              );
+              $('#project').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1,
+                  dropdownAutoWidth: true,
+                  width: '100%',
+
+                }
+              );
+              $('#tags').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1,
+                  dropdownAutoWidth: true,
+                  width: '100%',
+
+                }
+              );
+              $('#projectType').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1,
+                  dropdownAutoWidth: true,
+                  width: '100%',
+
+                }
+              );
+              $('#projectStatus').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1,
+                  dropdownAutoWidth: true,
+                  width: '100%',
+
+                }
+              );
+              $('#projectManager').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1,
+                  dropdownAutoWidth: true,
+                  width: '100%',
+
+                }
+              );
+              $('#bulktype').select2(
+                {
+                  theme: 'bootstrap-5',
+                  placeholder: $(this).data('placeholder'),
+                  // closeOnSelect: false,
+                  minimumResultsForSearch: -1,
+                  dropdownAutoWidth: true,
+                  width: '100%',
+
+                }
+              );
+            });
+
+          </script>
 
 
-  </script>
+          <script>
+            function showGrid() {
+              $('#project-list').addClass('d-none');
+              $('#project-grid').removeClass('d-none');
+              $('#project-grid-toggle').addClass('bg-white');
+              $('#project-list-toggle').removeClass('bg-white');
+            }
 
-  <script>
-    function showGrid() {
-      $('#project-list').addClass('d-none');
-      $('#project-grid').removeClass('d-none');
-      $('#project-grid-toggle').addClass('bg-white');
-      $('#project-list-toggle').removeClass('bg-white');
-    }
+            function showList() {
+              $('#project-grid').addClass('d-none');
+              $('#project-list').removeClass('d-none');
+              $('#project-list-toggle').addClass('bg-white');
+              $('#project-grid-toggle').removeClass('bg-white');
+            }
 
-    function showList() {
-      $('#project-grid').addClass('d-none');
-      $('#project-list').removeClass('d-none');
-      $('#project-list-toggle').addClass('bg-white');
-      $('#project-grid-toggle').removeClass('bg-white');
-    }
+            function showReal() {
+              $('#real-time-btn').addClass('active')
+              $('#scheduled-reminders-btn').removeClass('active')
+              $('#scheduled-reminders').removeClass('d-flex')
+              $('#scheduled-reminders').addClass('d-none')
+              $('#real-time').addClass('d-flex')
+              $('#real-time').removeClass('d-none')
 
-    function showReal() {
-      $('#real-time-btn').addClass('active')
-      $('#scheduled-reminders-btn').removeClass('active')
-      $('#scheduled-reminders').removeClass('d-flex')
-      $('#scheduled-reminders').addClass('d-none')
-      $('#real-time').addClass('d-flex')
-      $('#real-time').removeClass('d-none')
+            }
+            function showScheduled() {
+              $('#real-time-btn').removeClass('active')
+              $('#scheduled-reminders-btn').addClass('active')
+              $('#scheduled-reminders').removeClass('d-none')
+              $('#scheduled-reminders').addClass('d-flex')
+              $('#real-time').addClass('d-none')
+              $('#real-time').removeClass('d-flex')
+            }
+          </script>
 
-    }
-    function showScheduled() {
-      $('#real-time-btn').removeClass('active')
-      $('#scheduled-reminders-btn').addClass('active')
-      $('#scheduled-reminders').removeClass('d-none')
-      $('#scheduled-reminders').addClass('d-flex')
-      $('#real-time').addClass('d-none')
-      $('#real-time').removeClass('d-flex')
-    }
-  </script>
+          <script>
 
-  <script>
+            function saveFolder() {
+              const folderName = document.getElementById('folderName').value;
+              if (folderName.trim() === '') {
+                return;
+              }
 
-    function saveFolder() {
-      const folderName = document.getElementById('folderName').value;
-      if (folderName.trim() === '') {
-        return;
-      }
-
-      const rowFolders = document.getElementById('row-folders');
-      const newFolder = document.createElement('div');
-      newFolder.className = 'col-12 col-lg-3';
-      newFolder.innerHTML = `
+              const rowFolders = document.getElementById('row-folders');
+              const newFolder = document.createElement('div');
+              newFolder.className = 'col-12 col-lg-3';
+              newFolder.innerHTML = `
         <div class="p-3 gap-12 d-flex align-items-center justify-content-between bg-white border border-1 border-soft-200 rounded-3">
           <div class="d-flex align-items-center gap-12">
             <span class="icon-folder h4 text-primary-500"></span>
             <p class="text-strong-900 fs-7 fw-medium">${folderName}</p>
           </div>
           <span class="icon-grip-vertical fs-6_5 text-soft-400"></span>
-
         </div>
       `;
-      rowFolders.appendChild(newFolder);
-      document.getElementById('folderName').value = '';
-      $('#addfolderModal').modal('hide');
-      const livetoasttext = document.getElementById('Livetoast-text');
-      livetoasttext.textContent = `New folder: ${folderName} added successfully`;
-      const toastLiveExample = document.getElementById('liveToast')
-      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-      toastBootstrap.show()
+              rowFolders.appendChild(newFolder);
+              document.getElementById('folderName').value = '';
+              $('#addfolderModal').modal('hide');
+              const livetoasttext = document.getElementById('Livetoast-text');
+              livetoasttext.textContent = `New folder: ${folderName} added successfully`;
+              const toastLiveExample = document.getElementById('liveToast')
+              const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+              toastBootstrap.show()
 
-    }
-  </script>
+            }
+          </script>
 
-  <script>
+          <script>
 
-    // const toastTrigger = document.getElementById('liveToastBtn')
-    // const toastLiveExample = document.getElementById('liveToast')
+            // const toastTrigger = document.getElementById('liveToastBtn')
+            // const toastLiveExample = document.getElementById('liveToast')
 
-    // if (toastTrigger) {
-    //   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-    //   toastTrigger.addEventListener('click', () => {
-    //     toastBootstrap.show()
-    //   })
-    // }
-  </script>
-  <script>
-    function notif() {
-      var notifWrap = $('#notif-wrapper');
-      if (notifWrap.hasClass('d-block')) {
-        notifWrap.removeClass('d-block');
-        notifWrap.addClass('d-none');
-      } else {
-        notifWrap.removeClass('d-none');
-        notifWrap.toggleClass('d-block');
-      }
+            // if (toastTrigger) {
+            //   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+            //   toastTrigger.addEventListener('click', () => {
+            //     toastBootstrap.show()
+            //   })
+            // }
+          </script>
+          <script>
+            var options = {
+              series: [{
+                name: 'Wind',
+                data: [200, 400, 300, 500],
+                color: '#2457D9'
+              }, {
+                name: 'Solar',
+                data: [100, 200, 400, 300],
+                color: '#A7C6FB'
+              }, {
+                name: 'BESS',
+                data: [800, 600, 700, 900],
+                color: '#E2E8F0'
+              },],
+              chart: {
+                type: 'bar',
+                height: 350,
+                stacked: true,
+                toolbar: {
+                  show: false
+                },
+                zoom: {
+                  enabled: false
+                },
+
+              },
+              dataLabels: {
+                enabled: false,
+              },
+
+              responsive: [{
+                breakpoint: 480,
+                options: {
+                  legend: {
+                    position: 'bottom',
+                    offsetX: -10,
+                    offsetY: 0
+                  }
+                }
+              }],
+              plotOptions: {
+                bar: {
+                  horizontal: false,
+                  borderRadius: 0,
+                  borderRadiusApplication: 'end', // 'around', 'end'
+                  borderRadiusWhenStacked: 'last', // 'all', 'last'
+                  dataLabels: {
+                    total: {
+                      enabled: false,
+                      style: {
+                        fontSize: '13px',
+                        fontWeight: 900
+                      }
+                    }
+                  }
+                },
+              },
+              xaxis: {
+                categories: ['Feasibility', 'NTP', ['Mechanical', 'Completion'], ['Final', 'Completion']],
+                labels: {
+                  rotate: 0
+                }
+              },
+              legend: {
+                position: 'bottom',
+                offsetY: 0,
+                horizontalAlign: 'center',
+                fontSize: '14px',
+                fontWeight: 500,
+              },
+              fill: {
+                opacity: 1
+              }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+            var options = {
+              series: [{
+                name: 'Wind',
+                data: [200, 400],
+                color: '#2457D9'
+              }, {
+                name: 'Solar',
+                data: [100, 200],
+                color: '#A7C6FB'
+              }, {
+                name: 'BESS',
+                data: [800, 600],
+                color: '#E2E8F0'
+              },],
+              chart: {
+                type: 'bar',
+                height: 350,
+                stacked: true,
+                toolbar: {
+                  show: false
+                },
+                zoom: {
+                  enabled: false
+                },
+
+              },
+              dataLabels: {
+                enabled: false,
+              },
+              responsive: [{
+                breakpoint: 480,
+                options: {
+                  legend: {
+                    position: 'bottom',
+                    offsetX: -10,
+                    offsetY: 0
+                  }
+                }
+              }],
+              plotOptions: {
+                bar: {
+                  horizontal: false,
+                  borderRadius: 0,
+                  borderRadiusApplication: 'end', // 'around', 'end'
+                  borderRadiusWhenStacked: 'last', // 'all', 'last'
+                  dataLabels: {
+                    total: {
+                      enabled: false,
+                      style: {
+                        fontSize: '13px',
+                        fontWeight: 900
+                      }
+                    }
+                  }
+                },
+              },
+              xaxis: {
+                categories: ['2024', '2025'],
+                labels: {
+                  rotate: 0
+                }
+              },
+              legend: {
+                position: 'bottom',
+                offsetY: 0,
+                horizontalAlign: 'center',
+                fontSize: '14px',
+                fontWeight: 500,
+              },
+              fill: {
+                opacity: 1
+              }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chart2"), options);
+            chart.render();
+          </script>
+          <script>
+            function notif() {
+              var notifWrap = $('#notif-wrapper');
+              if (notifWrap.hasClass('d-block')) {
+                notifWrap.removeClass('d-block');
+                notifWrap.addClass('d-none');
+              } else {
+                notifWrap.removeClass('d-none');
+                notifWrap.toggleClass('d-block');
+              }
 
 
 
-    }
-  </script>
-  <!--end::Script-->
+            }
+          </script>
+          <!--end::Script-->
 </body>
 <!--end::Body-->
 

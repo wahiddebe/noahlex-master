@@ -313,3 +313,12 @@ div.dt-container.dt-empty-footer .dt-scroll-body {
 
   color: #525866;
 }
+
+.circle-div-32{
+  width: 32px;
+  height: 32px;
+  border: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
