@@ -418,7 +418,83 @@
 
             <div class="tab-content mt-32" id="myTabContent">
               <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="mb-4 d-flex flex-column flex-lg-row justify-content-between align-items-center gap-2">
+                  <div class="d-flex gap-2">
+                    <select class="form-select form-select-lg w-100 filter" placeholder="" id="role" aria-placeholder=""
+                      aria-label="Default select example">
+                      <option value="1">20 April, 2025 — 20 May, 2025</option>
+                    </select>
+                    <select class="form-select form-select-lg w-100 filter" placeholder="" id="status"
+                      aria-placeholder="" aria-label="Default select example">
+                      <option value="1">All Status</option>
+                    </select>
+                    <select class="form-select form-select-lg w-100 filter" placeholder="" id="Users"
+                      aria-placeholder="" aria-label="Default select example">
+                      <option value="1">All Users</option>
+                    </select>
+                    <select class="form-select form-select-lg w-100 filter" placeholder="" id="Document"
+                      aria-placeholder="" aria-label="Default select example">
+                      <option value="1">All Document</option>
+                    </select>
+                  </div>
+                  <div class="">
+                    <button type="button"
+                      class="btn-sm btn btn-outline-soft-200 text-strong-900 d-flex align-items-center gap-2">
+                      <span class="icon-printer text-sub-500 fs-6 "></span>
+                      Export
+                    </button>
+                  </div>
+                </div>
+                <div class="row g-4">
+                  <div class="col-12">
+                    <div class="border border-1 border-soft-200 p-4 rounded-3">
+                      <div class="mb-4">
+                        <h6 class="fs-6_5 fw-medium text-strong-900 mb-2">
+                          Document Progress
+                        </h6>
+                        <p class="fs-7 fw-medium text-soft-400">Monitor the movement of documents.</p>
+                      </div>
+                      <div class="text-center p-4 d-flex flex-column justify-content-center align-items-center">
+                        <img src="https://wahiddebe.github.io/iconmoon-master/images/empty-data.svg" alt="No Data"
+                          class="img-fluid mb-3" width="100" height="100">
+                        <h6 class="fs-6_5 fw-medium text-strong-900 mb-2">
+                          No data to display
+                        </h6>
+                        <p class="fs-7 fw-medium text-soft-400">One data becomes available, we’ll show it here.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="border border-1 border-soft-200 p-4 rounded-3 h-100">
+                      <div class="mb-4">
+                        <h6 class="fs-6_5 fw-medium text-strong-900 mb-4">
+                          Total Document Progress
+                        </h6>
+                        <p class="h2 fw-medium text-strong-900">0%</p>
+                      </div>
+                    </div>
 
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="border border-1 border-soft-200 p-4 rounded-3 h-100">
+                      <div class="mb-4">
+                        <h6 class="fs-6_5 fw-medium text-strong-900 mb-2">
+                          Status Transition Time
+                        </h6>
+                        <p class="fs-7 fw-medium text-soft-400">Evaluate the median duration that your documents remain
+                          in the status transition from uploaded to approved.</p>
+                      </div>
+                      <div class="text-center p-4 d-flex flex-column justify-content-center align-items-center">
+                        <img src="https://wahiddebe.github.io/iconmoon-master/images/empty-data.svg" alt="No Data"
+                          class="img-fluid mb-3" width="100" height="100">
+                        <h6 class="fs-6_5 fw-medium text-strong-900 mb-2">
+                          No data to display
+                        </h6>
+                        <p class="fs-7 fw-medium text-soft-400">One data becomes available, we’ll show it here.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                 <div class="d-flex justify-content-between gap-1 mb-4">
