@@ -301,6 +301,9 @@ div.dt-container.dt-empty-footer .dt-scroll-body {
     border-color: #FBBF24 !important;
 }
 
+.bg-warning-100{
+  background-color: #FEF3C7 !important;
+}
 .text-warning-900{
   color: #78350F !important;
 }
@@ -310,6 +313,14 @@ div.dt-container.dt-empty-footer .dt-scroll-body {
   color: #0A0D14;
 }
 .btn-plan{
+
+  color: #525866;
+}
+.btn-doc-toggle.active{
+  background-color: white;
+  color: #0A0D14;
+}
+.btn-doc-toggle{
 
   color: #525866;
 }
