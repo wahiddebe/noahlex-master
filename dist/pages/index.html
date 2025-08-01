@@ -499,7 +499,15 @@
               <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="d-flex justify-content-between align-items-center gap-2 mb-4">
                   <h1 class="mb-0 fs-6_5 text-strong-900 fw-medium">Project list</h1>
-                  <div class="d-flex align-items-stretch gap-12">
+                  <div class="d-flex align-items-stretch  gap-12">
+                    <div class="input-group flex-grow-1">
+                      <span class="input-group-text bg-white border-end-0 pe-0" id="inputGroup-sizing-lg"><i
+                          class="icon-search text-sub-500 fs-6"></i>
+                      </span>
+                      <input type="text" class="form-control border-start-0 ps-2" aria-label="Sizing example input"
+                        name="search-project" id="search-project" placeholder="Search document here..."
+                        aria-describedby="inputGroup-sizing-lg" oninput="searchProject()">
+                    </div>
                     <div class="p-_5 rounded-2 bg-weak-100 d-flex align-items-center">
                       <span id="project-grid-toggle" class="icon-layout-grid p-_5 rounded-1 fs-6 text-soft-400 bg-white"
                         onclick="showGrid()"></span>
@@ -508,13 +516,15 @@
 
                     </div>
                     <div class="border-end border-1 border-soft-200 "> </div>
-                    <a href="#" class="fs-7 fw-medium text-decoration-none text-primary-500">See more</a>
+                    <a href="#"
+                      class="fs-7 fw-medium text-decoration-none text-primary-500 text-nowrap align-self-center">See
+                      more</a>
 
                   </div>
                 </div>
                 <div class="" id="project-grid">
                   <div class="row g-3">
-                    <div class="col-lg-4 col-12">
+                    <div class="col-lg-4 col-12 col-search">
                       <div class="project-card rounded-3 bg-weak-100 p-2">
                         <div class="p-2 d-flex justify-content-between align-items-center">
                           <div class="">
@@ -543,16 +553,83 @@
                         </div>
                       </div>
                     </div>
+                    <div class="col-lg-4 col-12 col-search">
+                      <div class="project-card rounded-3 bg-weak-100 p-2">
+                        <div class="p-2 d-flex justify-content-between align-items-center">
+                          <div class="">
+                            <h1 class="fs-6 mb-2">Texas Solar</h1>
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="text-sub-500 fs-8">Westlake</span>
+                              <span class="bg-sub-500 p-_5 rounded-circle"></span>
+                              <span class="text-sub-500 fs-8">Lousiana</span>
+                            </div>
+                          </div>
+                          <a href="" class="text-decoration-none fs-6 text-strong-900">
+                            <i class="icon-dots-vertical"></i>
+                          </a>
+                        </div>
+                        <div class="">
+                          <img src="../assets/images/project/project.svg" class="w-100 rounded-3" height="254px" alt="">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center p-2">
+                          <p class="text-soft-400 fw-medium fs-7">Project Size: <span class="text-strong-900">100
+                              MW</span>
+                          </p>
+                          <div class="d-flex align-items-center gap-12">
+                            <span class="text-strong-900 fs-7 fw-medium">25%</span>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="text-center p-4 min-vh-50 d-flex flex-column justify-content-center align-items-center d-none"
+                    id="no-projects">
+                    <img src="https://wahiddebe.github.io/iconmoon-master/images/empty.svg" alt="No Data"
+                      class="img-fluid mb-3" width="100" height="100">
+                    <p class="fs-7 text-soft-400 mb-12">No data available in project</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#createProjectModal"
+                      class="btn btn-primary btn-noah-primary btn-sm fs-8 d-flex align-items-center gap-2">
+                      <span class="icon-plus fs-6 "></span> Create Project</button>
                   </div>
                 </div>
 
                 <div class="d-none" id="project-list">
                   <div class="row g-3">
-                    <div class="col-12">
+                    <div class="col-12 col-search">
                       <div class="project-card rounded-3 bg-weak-100 p-2">
                         <div class="p-2 d-flex justify-content-between align-items-center">
                           <div class="">
                             <h1 class="fs-6 mb-2">Bayou Wind SE</h1>
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="text-sub-500 fs-8">Westlake</span>
+                              <span class="bg-sub-500 p-_5 rounded-circle"></span>
+                              <span class="text-sub-500 fs-8">Lousiana</span>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center gap-12 p-2">
+                            <p class="text-soft-400 fw-medium fs-7">Project Size: <span class="text-strong-900">100
+                                MW</span>
+                            </p>
+                            <div class="border-end border-1 border-soft-200 align-self-stretch"> </div>
+
+                            <div class="d-flex align-items-center gap-12">
+                              <span class="text-strong-900 fs-7 fw-medium">25%</span>
+                            </div>
+                            <a href="" class="text-decoration-none fs-6 text-strong-900">
+                              <i class="icon-dots-vertical"></i>
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-12 col-search">
+                      <div class="project-card rounded-3 bg-weak-100 p-2">
+                        <div class="p-2 d-flex justify-content-between align-items-center">
+                          <div class="">
+                            <h1 class="fs-6 mb-2">Texas Solar</h1>
                             <div class="d-flex align-items-center gap-2">
                               <span class="text-sub-500 fs-8">Westlake</span>
                               <span class="bg-sub-500 p-_5 rounded-circle"></span>
@@ -1352,7 +1429,37 @@
 
     }
   </script>
+  <script>
+    function searchProject() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("search-project");
+      filter = input.value.toUpperCase();
+      tr = document.getElementsByClassName("col-search");
+      trNone = document.getElementsByClassName("col-search d-none");
 
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            // tr[i].style.display = "";
+            tr[i].classList.remove("d-none");
+          } else {
+            // tr[i].style.display = "none";
+            tr[i].classList.add("d-none");
+          }
+        }
+        if (trNone.length == tr.length) {
+          document.getElementById("no-projects").classList.remove("d-none");
+        } else {
+          document.getElementById("no-projects").classList.add("d-none");
+
+        }
+      }
+    }
+  </script>
   <!--end::Script-->
 </body>
 <!--end::Body-->
